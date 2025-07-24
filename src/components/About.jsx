@@ -34,11 +34,11 @@ export default function About() {
       >
         About Me
       </h2>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-1 md:grid-cols-2 ">
         {aboutSections.map((section, index) => (
           <div
             key={index}
-            className="group rounded-2xl p-6 bg-white hover:bg-blue-50 transition-all duration-300 shadow-xl shadow-blue-100 hover:shadow-2xl border border-gray-100 hover:border-blue-200"
+            className="group   p-6 bg-white hover:bg-blue-50 transition-all duration-300 border border-blue-200 hover:border-blue-200"
             data-aos="zoom-in-up"
             data-aos-delay={section.aosDelay}
           >

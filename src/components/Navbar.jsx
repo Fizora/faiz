@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="top-0 left-0 fixed z-10 w-full p-1 bg-transparent backdrop-blur-xl">
         <header className="mx-auto px-4 md:px-0 py-4 max-w-5xl flex justify-between items-center rounded-full">
           <div className="font-bold text-xl">
-            <p>Faiz.</p>
+            <p>Fizora</p>
           </div>
           {/* desktop */}
           <nav className="hidden md:flex px-2 items-center gap-4 text-gray-700">

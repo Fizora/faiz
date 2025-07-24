@@ -38,7 +38,7 @@ export default function Pricing() {
               <h2 className="text-xl font-semibold mb-2 text-blue-600">
                 Standard
               </h2>
-              <span className="flex items-center gap-2 p-2 rounded-full bg-blue-100">
+              <span className="flex px-4 py-1.5 items-center gap-2 rounded-full bg-blue-100">
                 <p>Populer</p> 🔥
               </span>
             </span>

@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturedProject from "@/components/FeaturedProject";
+import Project from "@/components/Project";
 import About from "@/components/About";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FeaturedProject />
+      <Project />
       <About />
       <Pricing />
       <Footer />

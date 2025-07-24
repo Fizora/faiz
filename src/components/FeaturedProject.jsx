@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { LuCalendar } from "react-icons/lu";
 
 const projects = [
@@ -38,14 +39,15 @@ export default function FeaturedProject() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl shadow-blue-100 transition  duration-300 bg-white border border-gray-100 hover:border-blue-200"
+              className=" rounded-2xl overflow-hidden shadow-lg hover:shadow-xl shadow-blue-100 transition  duration-300 bg-white border border-gray-100 hover:border-blue-200"
               data-aos="zoom-in-up"
               data-aos-delay={index * 100 + 100}
             >
-              <img
+              <Image
                 src="/project.png"
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                fill
+                className="w-full  relative h-48 object-cover "
               />
               <div className="p-5">
                 <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">

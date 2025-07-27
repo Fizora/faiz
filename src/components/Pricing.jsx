@@ -3,7 +3,7 @@ import { GoXCircle } from "react-icons/go";
 
 export default function PricingSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-5xl py-20 items-start">
+    <section className="px-4 grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-5xl py-20 items-start">
       {/* Basic Plan */}
       <div className="min-h-[600px]">
         <div className="py-4"></div>

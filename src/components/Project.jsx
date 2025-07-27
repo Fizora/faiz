@@ -21,7 +21,7 @@ const projects = [
 
 export default function Project() {
   return (
-    <section className="min-h-screen bg-[url('/pattern.svg')] bg-cover bg-center py-16">
+    <section className="px-4 min-h-screen bg-[url('/pattern.svg')] bg-cover bg-center py-16">
       <div className="mx-auto max-w-5xl">
         <h1
           className="text-4xl font-bold text-gray-900 text-center mb-12"
@@ -29,7 +29,7 @@ export default function Project() {
         >
           My Projects
         </h1>
-        <div className="grid grid-cols-1 gap-20">
+        <div className="grid grid-cols-1 gap-5 md:gap-10 lg:gap-20">
           {projects.map((item) => (
             <div
               key={item.id}

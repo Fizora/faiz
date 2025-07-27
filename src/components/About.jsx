@@ -25,7 +25,7 @@ const aboutSections = [
 export default function About() {
   return (
     <section
-      className="mx-auto max-w-5xl px-4 py-20 bg-gradient-to-b from-white to-gray-50"
+      className="mx-auto max-w-5xl px-4 py-40 bg-gradient-to-b from-white to-gray-50"
       id="about"
     >
       <h2

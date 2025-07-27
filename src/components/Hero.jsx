@@ -44,7 +44,7 @@ export default function Hero() {
           </Link>
         </div>
         <h1 className="font-medium text-xl text-center mt-8" data-aos="fade-up">
-          My Expertise Unleashed
+          My Stack Expertising
         </h1>
         <div className="marquee-wrapper mx-auto md:max-w-5xl w-full">
           <div className="marquee">

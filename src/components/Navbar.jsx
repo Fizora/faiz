@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="top-0 left-0 fixed z-10 w-full p-1 bg-transparent backdrop-blur-xl">
-        <header className="mx-auto px-4 md:px-0 py-4 max-w-5xl flex justify-between items-center rounded-full">
+      <div className="top-0 left-0 fixed z-10 w-full p-1 bg-transparent backdrop-blur-3xl">
+        <header className="mx-auto px-4 md:px-0 py-4 max-w-5xl flex justify-between items-center rounded-md">
           <div className="font-bold text-xl">
             <p>Fizora</p>
           </div>
@@ -21,7 +21,7 @@ const Navbar = () => {
           <nav className="hidden md:block">
             <Link
               href=""
-              className="bg-blue-500 text-white px-5 py-1.5 rounded-full"
+              className="bg-blue-500 text-white px-5 py-1.5 rounded-md"
             >
               Contact Me
             </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
               <Link href="">Pricing</Link>
               <Link
                 href=""
-                className="bg-blue-500 text-white px-5 py-1.5 rounded-full"
+                className="bg-blue-500 text-white px-5 py-1.5 rounded-md"
               >
                 Contact Me
               </Link>

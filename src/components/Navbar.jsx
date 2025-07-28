@@ -5,51 +5,99 @@ import { LuMenu, LuX } from "react-icons/lu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  return (
-    <>
-      <div className="top-0 left-0 fixed z-10 w-full p-1 bg-transparent backdrop-blur-3xl">
-        <header className="mx-auto px-4 md:px-0 py-4 max-w-5xl flex justify-between items-center rounded-md">
-          <div className="font-bold text-xl">
-            <p>Fizora</p>
-          </div>
-          {/* desktop */}
-          <nav className="hidden md:flex px-2 items-center gap-4 text-gray-700">
-            <Link href="">About</Link>
-            <Link href="">Work</Link>
-            <Link href="">Pricing</Link>
-          </nav>
-          <nav className="hidden md:block">
-            <Link
-              href=""
-              className="bg-blue-500 text-white px-5 py-1.5 rounded-md"
-            >
-              Contact Me
-            </Link>
-          </nav>
-          {/* mobile */}
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="block md:hidden "
+  return (
+    <div className="top-0 left-0 fixed z-50 w-full p-2 bg-white/80">
+      <header className="mx-auto px-4 md:px-6 py-4 max-w-5xl flex justify-between items-center rounded-md">
+        <div className="font-bold text-xl text-gray-900">
+          <p>Fizora</p>
+        </div>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex px-2 items-center gap-6 text-gray-900">
+          <Link href="#about" className="hover:text-blue-500 transition-colors">
+            About
+          </Link>
+          <Link href="#work" className="hover:text-blue-500 transition-colors">
+            Work
+          </Link>
+          <Link
+            href="#pricing"
+            className="hover:text-blue-500 transition-colors"
           >
-            {isOpen ? <LuX size={24} /> : <LuMenu size={24} />}
-          </button>
-          {isOpen && (
-            <nav className="md:hidden open-sidebar px-2 top-0  flex flex-col justify-center items-center left-0 z-2 absolute min-h-screen gap-4 text-gray-700 bg-white w-3/4">
-              <Link href="">About</Link>
-              <Link href="">Work</Link>
-              <Link href="">Pricing</Link>
+            Pricing
+          </Link>
+        </nav>
+        <nav className="hidden md:block">
+          <Link
+            href="#contact"
+            className="bg-blue-500 text-white px-5 py-1.5 rounded-md hover:bg-blue-600 transition-colors"
+          >
+            Contact Me
+          </Link>
+        </nav>
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-gray-900 focus:outline-none"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <LuX size={24} /> : <LuMenu size={24} />}
+        </button>
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div
+            className="md:hidden fixed inset-0 bg-opacity-50 z-40 transition-opacity duration-300"
+            style={{ opacity: isOpen ? 1 : 0 }}
+            onClick={() => setIsOpen(false)}
+          >
+            <nav
+              className="fixed top-0 right-0 w-full h-screen bg-white p-6 flex flex-col justify-start items-center gap-6 text-gray-900 shadow-lg transition-all duration-300 ease-in-out"
+              style={{
+                transform: isOpen ? "translateX(0)" : "translateX(100%)",
+                opacity: isOpen ? 1 : 0,
+              }}
+            >
+              <button
+                onClick={() => setIsOpen(false)}
+                className="self-end text-gray-900"
+                aria-label="Close menu"
+              >
+                <LuX size={24} />
+              </button>
               <Link
-                href=""
-                className="bg-blue-500 text-white px-5 py-1.5 rounded-md"
+                href="#about"
+                className="text-lg hover:text-blue-500 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="#work"
+                className="text-lg hover:text-blue-500 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Work
+              </Link>
+              <Link
+                href="#pricing"
+                className="text-lg hover:text-blue-500 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Pricing
+              </Link>
+              <Link
+                href="#contact"
+                className="bg-blue-500 text-white px-5 py-2 rounded-md text-lg hover:bg-blue-600 transition-colors"
+                onClick={() => setIsOpen(false)}
               >
                 Contact Me
               </Link>
             </nav>
-          )}
-        </header>
-      </div>
-    </>
+          </div>
+        )}
+      </header>
+    </div>
   );
 };
 

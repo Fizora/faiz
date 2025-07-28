@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="top-0 left-0 fixed z-50 w-full p-2 bg-white/80">
+    <div className="top-0 left-0 fixed z-50 w-full p-2 bg-white/90 backdrop-blur-sm">
       <header className="mx-auto px-4 md:px-6 py-4 max-w-5xl flex justify-between items-center rounded-md">
         <div className="font-bold text-xl text-gray-900">
           <p>Fizora</p>

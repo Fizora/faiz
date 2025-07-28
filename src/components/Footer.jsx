@@ -17,7 +17,7 @@ export default function Footer() {
           LinkedIn
         </Link>
         <p>
-          © {new Date().getFullYear()}Moch Choirul Faiz. All rights reserved.
+          © {new Date().getFullYear()} Moch Choirul Faiz. All rights reserved.
         </p>
       </div>
     </footer>

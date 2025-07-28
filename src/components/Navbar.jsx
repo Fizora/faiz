@@ -52,7 +52,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
           >
             <nav
-              className="fixed top-0 right-0 w-full h-screen bg-white p-6 flex flex-col justify-start items-center gap-6 text-gray-900 shadow-lg transition-all duration-300 ease-in-out"
+              className="fixed top-0 right-0 w-full h-screen bg-white/90 backdrop-blur-sm p-6 flex flex-col justify-start items-end gap-6 text-gray-900 shadow-lg transition-all duration-300 ease-in-out"
               style={{
                 transform: isOpen ? "translateX(0)" : "translateX(100%)",
                 opacity: isOpen ? 1 : 0,

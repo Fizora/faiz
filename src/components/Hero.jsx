@@ -1,47 +1,42 @@
 import Link from "next/link";
 import { MdWork } from "react-icons/md";
 import { LuAArrowUp, LuArrowRight } from "react-icons/lu";
+// import TextType from "./ui/TextType";
+import FuzzyText from "./ui/FuzzyText";
 
 export default function Hero() {
   return (
-    <section className="px-3  bg-cover bg-center">
-      <div className="mx-auto max-w-5xl min-h-screen space-y-4  flex flex-col items-center justify-center relative">
-        <h1 className="text-4xl md:text-5xl font-bold">
-          Ubah Bisnis Anda dengan{" "}
-          <span className="text-blue-500">Website Cepat & SEO Optimal</span>{" "}
-          yang Mengubah Pengunjung Menjadi{" "}
-          <span className="text-blue-500">Pelanggan Setia!</span>
-        </h1>
-        <p
-          className="text-gray-700 text-base"
-          data-aos="zoom-in-up"
-          data-aos-delay="300"
-        >
-          Maksimalkan potensi bisnis Anda dengan website profesional yang
-          memikat dan meningkatkan penjualan. Percayakan pembuatan website Anda
-          kepada saya, dan rasakan performa luar biasa serta peringkat teratas
-          di mesin pencari. Jangan biarkan pesaing Anda melangkah lebih
-          dulu—mulai sekarang juga!
-        </p>
-        <div className="flex items-center gap-3 text-md font-medium justify-start">
-          <Link
-            href="#projects"
-            className="flex items-center gap-2 px-5 py-1.5 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors"
-            data-aos="zoom-in-up"
-            data-aos-delay="400"
-          >
-            Lihat Proyek Saya <MdWork />
-          </Link>
-          <Link
-            href="#contact"
-            className="flex items-center gap-2 px-5 py-1.5 rounded-full bg-green-500 text-white hover:bg-green-600 transition-colors"
-            data-aos="zoom-in-up"
-            data-aos-delay="500"
-          >
-            Pesan Jasa Website Sekarang <LuArrowRight />
-          </Link>
-        </div>
-      </div>
+    // <section className="px-4 py-8 sm:px-6 md:px-8 bg-cover bg-center min-h-screen flex items-center">
+    //   <div className="mx-auto max-w-5xl py-10 space-y-6">
+    //     <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+    //       <TextType
+    //         text={["Text typing effect", "for your websites", "Happy coding!"]}
+    //         typingSpeed={75}
+    //         className="text-black"
+    //         pauseDuration={1500}
+    //         showCursor={true}
+    //         cursorCharacter="|"
+    //       />
+    //     </h1>
+    //     <p className="mt-4 text-sm sm:text-base md:text-lg">
+    //       Di era digital sekarang sangat penting untuk memiliki landing page
+    //       site untuk usaha kita, agar lebih mudah ditemukan dan pelanggan hanya
+    //       perlu membaca informasi terkait usaha dan apa yang kita jual.
+    //     </p>
+    //     <div className="flex items-center gap-3">
+    //       <a href="">Pesan sekarang</a>
+    //       <a href="">Lihat Proyek</a>
+    //     </div>
+    //   </div>
+    // </section>
+
+    <section className="min-h-screen flex flex-col justify-center items-center text-center bg-black">
+      <h1 className="md:text-6xl font-bold text-white mb-4">
+        <FuzzyText>404</FuzzyText>
+      </h1>
+      <p>
+        <FuzzyText>Development.</FuzzyText>
+      </p>
     </section>
   );
 }

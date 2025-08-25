@@ -21,7 +21,7 @@ const projects = [
 
 export default function Project() {
   return (
-    <section className="px-4 min-h-screen bg-[url('/pattern.svg')] bg-cover bg-center py-16">
+    <section className="px-4 min-h-screen py-16">
       <div className="mx-auto max-w-5xl">
         <h1
           className="text-4xl font-bold text-gray-900 text-center mb-12"

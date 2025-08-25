@@ -1,61 +1,79 @@
-const aboutSections = [
+const stepSections = [
   {
-    icon: "🎨", // Ikon modern yang relevan
-    title: "My Passions",
+    icon: "📝",
+    title: "Memesan",
     content:
-      "I thrive on exploring cutting-edge technologies, crafting mini projects, and diving into startup insights. Weekends are for sketching and nature hikes to recharge.",
+      "Konsultasi dan pemesanan website landing page sangat mudah, cukup hubungi kami dan tentukan kebutuhan Anda.",
     aosDelay: 0,
   },
   {
-    icon: "💻", // Ikon untuk perjalanan pengembang
-    title: "Development Path",
+    icon: "💡",
+    title: "Perencanaan Konsep",
     content:
-      "I craft high-performance websites with React, Next.js, and Tailwind CSS, while expanding my skills into backend technologies like Node.js and MongoDB.",
+      "Diskusi konsep web, pengumpulan aset (gambar/logo), deskripsi usaha, dan latar belakang bisnis Anda untuk hasil yang relevan.",
     aosDelay: 100,
   },
   {
-    icon: "🌱", // Ikon untuk kehidupan di luar kode
-    title: "Beyond the Code",
+    icon: "⚙️",
+    title: "Pengerjaan Website",
     content:
-      "Outside coding, I journal my thoughts, study psychology, and seek life balance—fueling creativity and sharp problem-solving.",
+      "Website mulai dikerjakan sesuai konsep dan kebutuhan, proses cepat tanpa ribet dan transparan.",
     aosDelay: 200,
+  },
+  {
+    icon: "✅",
+    title: "Konfirmasi Hasil",
+    content:
+      "Hasil website dikonfirmasi ke Anda, revisi jika diperlukan agar sesuai harapan.",
+    aosDelay: 300,
+  },
+  {
+    icon: "🚀",
+    title: "Deployment",
+    content:
+      "Website langsung di-deploy dan siap digunakan untuk mendukung bisnis Anda!",
+    aosDelay: 400,
   },
 ];
 
-export default function About() {
+export default function Step() {
   return (
     <section
-      className="mx-auto max-w-5xl px-4 py-40 bg-gradient-to-b from-white to-gray-50"
-      id="about"
+      className="mx-auto max-w-5xl px-4 py-32 bg-gradient-to-b from-white to-gray-50"
+      id="step"
     >
       <h2
-        className="text-4xl font-bold text-gray-900 text-center mb-16 tracking-tight"
+        className="text-4xl font-bold text-gray-900 text-center mb-12"
         data-aos="fade-up"
       >
-        About Me
+        Step Pemesanan Website
       </h2>
-      <div className="grid gap-1 md:grid-cols-2 ">
-        {aboutSections.map((section, index) => (
-          <div
+      <ol className="space-y-8">
+        {stepSections.map((section, index) => (
+          <li
             key={index}
-            className="group   p-6 bg-white hover:bg-blue-50 transition-all duration-300 border border-blue-200 hover:border-blue-200"
-            data-aos="zoom-in-up"
+            className="border-l-4 border-blue-500 pl-6 relative"
+            data-aos="fade-up"
             data-aos-delay={section.aosDelay}
           >
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3 text-blue-600">
+            <div className="flex items-center mb-2">
+              <span className="text-2xl mr-3 text-blue-600">
                 {section.icon}
               </span>
-              <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
-                {section.title}
-              </h3>
+              <span className="text-lg font-semibold text-gray-800">
+                {index + 1}. {section.title}
+              </span>
             </div>
             <p className="text-gray-600 text-base leading-relaxed">
               {section.content}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
+      <p className="text-center text-lg mt-12 font-semibold">
+        Proses pemesanan sangat mudah, cepat, dan tanpa banyak syarat. Cukup 5
+        langkah, website Anda siap online!
+      </p>
     </section>
   );
 }

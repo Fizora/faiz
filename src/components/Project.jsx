@@ -22,7 +22,7 @@ const projects = [
 export default function Project() {
   return (
     <section className="px-4 min-h-screen py-16">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl">
         <h1
           className="text-4xl font-bold text-gray-900 text-center mb-12"
           data-aos="fade-up"
@@ -33,7 +33,7 @@ export default function Project() {
           {projects.map((item) => (
             <div
               key={item.id}
-              className="bg-gray-950 text-white rounded-2xl p-2 shadow-lg shadow-blue-100 hover:shadow-xl space-y-3"
+              className="bg-zinc-950 text-white rounded-2xl p-2 shadow-sm shadow-blue-100 hover:shadow-xl space-y-3"
               data-aos="zoom-in-up"
               data-aos-delay={item.id * 100}
             >
@@ -49,7 +49,7 @@ export default function Project() {
               <p className="text-gray-300 text-sm line-clamp-2">
                 {item.description}
               </p>
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 text-sm">
                 <LuCalendar />
                 <p>{item.date}</p>
               </span>

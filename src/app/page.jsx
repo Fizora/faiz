@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   useEffect(() => {
@@ -18,13 +19,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* <Navbar /> */}
+    <div className="min-h-screen  text-xl">
+      <Navbar />
       <Hero />
-      {/* <Step /> */}
-      {/* <Project /> */}
+      <Step />
+      <Banner />
+      <Project />
       {/* <Pricing /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

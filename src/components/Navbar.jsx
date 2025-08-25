@@ -8,31 +8,18 @@ const Navbar = () => {
 
   return (
     <div className="top-0 left-0 fixed z-50 w-full">
-      <header className="mx-auto px-4 md:px-6 py-4 max-w-5xl bg-white flex justify-between items-center ">
-        <div className="font-bold text-xl   ">
+      <header className="mx-auto px-4 md:px-6 py-4  bg-white flex justify-between items-center ">
+        <div className="font-bold text-xl">
           <p>FIZORA</p>
         </div>
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex px-2 items-center gap-6">
-          <Link href="#about" className="hover:text-blue-500 transition-colors">
-            STEPS
-          </Link>
-          <Link href="#work" className="hover:text-blue-500 transition-colors">
-            PROJECT
-          </Link>
-          <Link
-            href="#pricing"
-            className="hover:text-blue-500 transition-colors"
-          >
-            PRICE
-          </Link>
-        </nav>
-        <nav className="hidden md:block">
+
+        <nav className="hidden md:flex items-center gap-6">
+          <Link href="#Showcase">Showcase</Link>
           <Link
             href="#contact"
-            className="bg-black text-white  px-5 py-1.5  duration-500 transition-colors"
+            className="bg-amber-400  rounded-sm px-5 py-1.5  duration-500 transition-colors"
           >
-            CONTACT
+            Contact
           </Link>
         </nav>
         {/* Mobile Menu Button */}
@@ -67,28 +54,28 @@ const Navbar = () => {
               </button>
               <Link
                 href="#about"
-                className="text-lg hover:text-blue-500 text-black transition-colors"
+                className="text-lg hover:text-amber-500 text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="#work"
-                className="text-lg hover:text-blue-500 text-black transition-colors"
+                className="text-lg hover:text-amber-500 text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Work
               </Link>
               <Link
                 href="#pricing"
-                className="text-lg hover:text-blue-500 text-black transition-colors"
+                className="text-lg hover:text-amber-500 text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
               </Link>
               <Link
                 href="#contact"
-                className="bg-blue-500  px-5 py-2 rounded-md text-lg hover:bg-blue-600 transition-colors"
+                className="bg-amber-500  px-5 py-2 rounded-md text-lg hover:bg-amber-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Me

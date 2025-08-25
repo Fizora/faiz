@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Project from "@/components/Project";
-import About from "@/components/About";
+import Step from "@/components/Step";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 import "aos/dist/aos.css";
@@ -21,7 +21,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <About />
+      <Step />
       <Project />
       <Pricing />
       <Footer />

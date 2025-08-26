@@ -24,7 +24,7 @@ export default function Home() {
       <Hero />
       <Step />
       <Banner />
-      <Project />
+      {/* <Project /> */}
       {/* <Pricing /> */}
       <Footer />
     </div>

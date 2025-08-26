@@ -11,7 +11,7 @@ export default function Hero() {
           Permudah pelanggan untuk{" "}
           <span className="text-amber-400">menemukan</span> produk Anda.
         </h1>
-        <h1 className="text-3xl lg:text-7xl font-bold bg-black p-2 h-20">
+        <h1 className="text-3xl lg:text-7xl font-bold bg-black p-2 h-25">
           <TextType
             text={[
               "Tingkatkan Visibilitas Online",

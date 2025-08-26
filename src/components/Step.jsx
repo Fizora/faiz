@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+
 const stepSections = [
   {
     title: "📞 Hubungi Kami",
@@ -32,6 +35,7 @@ const stepSections = [
 ];
 
 export default function Step() {
+  const [count, setCount] = useState(0);
   return (
     <section
       className="mx-auto max-w-7xl px-4 py-32 bg-gradient-to-b from-white to-gray-50"
@@ -45,7 +49,7 @@ export default function Step() {
         langkah, website Anda siap online!
       </p>
 
-      <div className="px-3 flex flex-col gap-10 my-20">
+      <div className="px-3 flex flex-col gap-10 my-20 ">
         {stepSections.map((item) => (
           <>
             <div data-aos-delay={item.aosDelay}>

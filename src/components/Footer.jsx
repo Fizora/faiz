@@ -6,15 +6,15 @@ export default function Footer() {
       <div className="mt-2">
         <Link
           href="https://github.com/yourusername"
-          className="text-blue-400 mx-2"
+          className="text-amber-400 mx-2"
         >
           GitHub
         </Link>
         <Link
           href="https://linkedin.com/in/yourusername"
-          className="text-blue-400 mx-2"
+          className="text-amber-400 mx-2"
         >
-          LinkedIn
+          WhatsApp
         </Link>
         <p>
           © {new Date().getFullYear()} Moch Choirul Faiz. All rights reserved.

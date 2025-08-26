@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="top-0 left-0 fixed z-50 w-full">
-      <header className="mx-auto px-4 md:px-6 py-4  bg-white flex justify-between items-center ">
+    <div className="top-0 left-0 fixed z-50 w-full bg-white">
+      <header className="mx-auto px-4 md:px-0 py-4 max-w-7xl flex justify-between items-center ">
         <div className="font-bold text-xl">
           <p>FIZORA</p>
         </div>
@@ -54,28 +54,28 @@ const Navbar = () => {
               </button>
               <Link
                 href="#about"
-                className="text-lg hover:text-amber-500 text-black transition-colors"
+                className="text-4xl hover:text-amber-500 text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="#work"
-                className="text-lg hover:text-amber-500 text-black transition-colors"
+                className="text-4xl hover:text-amber-500 text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Work
               </Link>
               <Link
                 href="#pricing"
-                className="text-lg hover:text-amber-500 text-black transition-colors"
+                className="text-4xl hover:text-amber-500 text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
               </Link>
               <Link
                 href="#contact"
-                className="bg-amber-500  px-5 py-2 rounded-md text-lg hover:bg-amber-600 transition-colors"
+                className="bg-amber-500  px-5 py-2 rounded-md text-4xl hover:bg-amber-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Me

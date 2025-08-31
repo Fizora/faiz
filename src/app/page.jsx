@@ -33,7 +33,7 @@ export default function Home() {
         {/* hero */}
         <section className="py-30 space-y-6">
           <SplitText
-            text="Welcome 👋"
+            text="Welcome Guys👋"
             className="text-3xl md:text-6xl text-white font-bold"
             delay={100}
             duration={0.6}

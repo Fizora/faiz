@@ -85,36 +85,38 @@ export default function Sidebar() {
 
       {/* Menu mobile */}
       {open && (
-        <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50 p-4">
-          <div className="flex items-center justify-between w-full">
-            <div className=""></div>
-            <button
-              onClick={() => setIsOpen(!open)}
-              className="bg-zinc-900 border border-zinc-700 rounded-sm p-2"
-            >
-              {open ? (
-                <X className="text-white" />
-              ) : (
-                <Menu className="text-white" />
-              )}
-            </button>
-          </div>
-          <nav className="flex flex-col gap-5">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`px-2 py-1 rounded-sm hover:text-white ${
-                  active === item.href
-                    ? "text-white font-semibold"
-                    : "text-zinc-500"
-                }`}
+        <div className="fixed top-0 left-0 w-full z-50">
+          <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50 p-4">
+            <div className="flex items-center justify-between w-full">
+              <div className=""></div>
+              <button
+                onClick={() => setIsOpen(!open)}
+                className="bg-zinc-900 border border-zinc-700 rounded-sm p-2"
               >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+                {open ? (
+                  <X className="text-white" />
+                ) : (
+                  <Menu className="text-white" />
+                )}
+              </button>
+            </div>
+            <nav className="flex flex-col gap-5">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`px-2 py-1 rounded-sm hover:text-white ${
+                    active === item.href
+                      ? "text-white font-semibold"
+                      : "text-zinc-500"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
         </div>
       )}
     </>

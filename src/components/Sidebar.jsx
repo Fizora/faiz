@@ -25,7 +25,7 @@ export default function Sidebar() {
   return (
     <>
       {/* mobile navbar */}
-      <div className="fixed top-0 left-0 w-full md:hidden flex items-center justify-between px-4 py-4 border-b border-zinc-800">
+      <div className="fixed top-0 left-0 w-full md:hidden flex items-center justify-between px-4 py-4 border-b bg-zinc-950 z-10 border-zinc-800">
         <div className="flex items-center gap-2">
           <Image
             src="/profile.jpg"
@@ -66,7 +66,7 @@ export default function Sidebar() {
           </p>
         </header>
 
-        <nav className="flex flex-col gap-5 mt-10">
+        <nav className="flex flex-col gap-3 mt-10">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -83,7 +83,7 @@ export default function Sidebar() {
         </nav>
       </aside>
 
-      {/* sidebar mobile */}
+      {/* Menu mobile */}
       {open && (
         <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50 p-4">
           <div className="flex items-center justify-between w-full">

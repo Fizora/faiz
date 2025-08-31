@@ -31,7 +31,7 @@ export default function Home() {
       {/* Konten */}
       <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400 overflow-y-auto">
         {/* hero */}
-        <section className="space-y-6">
+        <section className="py-30 space-y-6">
           <SplitText
             text="Welcome 👋"
             className="text-3xl md:text-6xl text-white font-bold"
@@ -60,7 +60,7 @@ export default function Home() {
         </section>
 
         {/* about */}
-        <section className="py-16 space-y-6">
+        <section className="py-30 space-y-6">
           <h1 className="text-3xl md:text-5xl text-white font-semibold">
             About.
           </h1>

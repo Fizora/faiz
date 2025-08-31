@@ -1,15 +1,25 @@
-import Development from "@/components/Development";
+"use client";
 import Sidebar from "@/components/Sidebar";
+import Development from "@/components/Development";
 
 export default function SocialMedia() {
   return (
-    <>
-      <div className="min-h-screen  flex items-center justify-between mx-auto max-w-4xl">
-        <Sidebar />
-        <div className="overflow-y-auto min-h-screen items-center justify-center flex text-center">
+    <div className="min-h-screen md:flex mx-auto md:max-w-4xl">
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Konten utama */}
+      <div className="flex-1 overflow-y-auto min-h-screen flex items-center justify-center p-6">
+        <div className="text-center space-y-6">
+          {/* Komponen Development */}
           <Development />
+
+          {/* Info tambahan */}
+          <p className="text-zinc-500">
+            This page is currently under development. Stay tuned for updates! 🚧
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

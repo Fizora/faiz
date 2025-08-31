@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Sidebar() {
   const navItems = [
@@ -23,8 +24,32 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="h-screen fixed left-70 top-0 w-1/4 pt-20">
-        {/* header */}
+      {/* mobile navbar */}
+      <div className="md:hidden flex items-center justify-between px-4 py-4 border-b border-zinc-800">
+        <div className="flex items-center gap-2">
+          <Image
+            src="/profile.jpg"
+            alt="My Profile"
+            height={40}
+            width={40}
+            className="rounded-full"
+          />
+          <span className="text-white font-medium">Fizora</span>
+        </div>
+        <button
+          onClick={() => setIsOpen(!open)}
+          className="bg-zinc-900 border border-zinc-700 rounded-sm p-2"
+        >
+          {open ? (
+            <X className="text-white" />
+          ) : (
+            <Menu className="text-white" />
+          )}
+        </button>
+      </div>
+
+      {/* sidebar desktop */}
+      <aside className="hidden md:flex md:flex-col md:w-64 h-screen border-r border-zinc-800 p-6">
         <header className="space-y-3">
           <div className="flex items-center gap-2">
             <Image
@@ -34,21 +59,22 @@ export default function Sidebar() {
               width={50}
               className="rounded-full"
             />
-            <a href="">Fizora</a>
+            <span className="text-white font-semibold">Fizora</span>
           </div>
-          <p className="bg-zinc-900 w-max px-2 rounded-sm border border-zinc-700">
-            Software Engineer.{" "}
+          <p className="bg-zinc-900 w-max px-2 py-1 rounded-sm border border-zinc-700 text-sm">
+            Software Engineer
           </p>
         </header>
 
-        {/* navigasi */}
-        <nav className="hidden md:flex flex-col gap-7 py-20">
+        <nav className="flex flex-col gap-5 mt-10">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`flex px-2 rounded-sm items-center justify-between hover:text-white ${
-                active === item.href ? "text-white " : "text-zinc-500"
+              className={`px-2 py-1 rounded-sm hover:text-white ${
+                active === item.href
+                  ? "text-white font-semibold"
+                  : "text-zinc-500"
               }`}
             >
               {item.name}
@@ -56,6 +82,41 @@ export default function Sidebar() {
           ))}
         </nav>
       </aside>
+
+      {/* sidebar mobile */}
+      {open && (
+        <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50 p-4">
+          <div className="flex items-center justify-between w-full">
+            <div className=""></div>
+            <button
+              onClick={() => setIsOpen(!open)}
+              className="bg-zinc-900 border border-zinc-700 rounded-sm p-2"
+            >
+              {open ? (
+                <X className="text-white" />
+              ) : (
+                <Menu className="text-white" />
+              )}
+            </button>
+          </div>
+          <nav className="flex flex-col gap-5">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`px-2 py-1 rounded-sm hover:text-white ${
+                  active === item.href
+                    ? "text-white font-semibold"
+                    : "text-zinc-500"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </>
   );
 }

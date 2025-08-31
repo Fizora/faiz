@@ -25,7 +25,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row">
+    <div className="min-h-screen flex flex-col md:flex-row max-w-5xl mx-auto">
       <Sidebar />
 
       {/* Konten */}

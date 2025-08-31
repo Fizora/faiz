@@ -25,7 +25,7 @@ export default function Sidebar() {
   return (
     <>
       {/* mobile navbar */}
-      <div className="md:hidden flex items-center justify-between px-4 py-4 border-b border-zinc-800">
+      <div className="fixed top-0 left-0 w-full md:hidden flex items-center justify-between px-4 py-4 border-b border-zinc-800">
         <div className="flex items-center gap-2">
           <Image
             src="/profile.jpg"
@@ -49,7 +49,7 @@ export default function Sidebar() {
       </div>
 
       {/* sidebar desktop */}
-      <aside className="hidden md:flex md:flex-col md:w-64 h-screen border-r border-zinc-800 p-6">
+      <aside className="hidden md:flex md:flex-col md:w-64 h-screen sticky top-0 py-30  px-6">
         <header className="space-y-3">
           <div className="flex items-center gap-2">
             <Image

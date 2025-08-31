@@ -4,7 +4,7 @@ import Development from "@/components/Development";
 
 export default function Project() {
   return (
-    <div className="min-h-screen md:flex mx-auto md:max-w-4xl">
+    <div className="min-h-screen flex flex-col md:flex-row max-w-4xl mx-auto">
       {/* Sidebar */}
       <Sidebar />
 

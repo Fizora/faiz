@@ -25,7 +25,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row max-w-5xl mx-auto">
+    <div className="min-h-screen flex flex-col md:flex-row max-w-4xl mx-auto">
       <Sidebar />
 
       {/* Konten */}
@@ -33,7 +33,7 @@ export default function Home() {
         {/* hero */}
         <section className="space-y-6">
           <SplitText
-            text="Javascript Addict."
+            text="Welcome 👋"
             className="text-3xl md:text-6xl text-white font-bold"
             delay={100}
             duration={0.6}

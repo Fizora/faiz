@@ -1,7 +1,7 @@
-import { Inter, Poppins } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const font = Poppins({
+const font = Geist_Mono({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <meta name="description" content="" />
-      <body className={`${font.className} antialiased`}>{children}</body>
+      <body className={`${font.className} antialiased bg-zinc-950 text-white`}>
+        {children}
+      </body>
     </html>
   );
 }

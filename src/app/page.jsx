@@ -1,14 +1,9 @@
 "use client";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Project from "@/components/Project";
-import Step from "@/components/Step";
-import Pricing from "@/components/Pricing";
-import Footer from "@/components/Footer";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { useEffect } from "react";
-import Banner from "@/components/Banner";
+import { useEffect, useState } from "react";
+import Sidebar from "@/components/Sidebar";
+import Development from "@/components/Development";
 
 export default function Home() {
   useEffect(() => {
@@ -19,14 +14,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen  text-xl">
-      <Navbar />
-      <Hero />
-      <Step />
-      <Banner />
-      {/* <Project /> */}
-      {/* <Pricing /> */}
-      <Footer />
+    <div className="min-h-screen  flex items-center justify-between mx-auto max-w-4xl">
+      <Sidebar />
+      <div className="overflow-y-auto min-h-screen items-center justify-center flex text-center">
+        <Development />
+      </div>
     </div>
   );
 }

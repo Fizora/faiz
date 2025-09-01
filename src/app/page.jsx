@@ -72,7 +72,7 @@ export default function Home() {
       <Sidebar />
 
       {/* Konten */}
-      <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400 overflow-y-auto">
+      <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400">
         {/* hero */}
         <section className="py-30 space-y-6">
           <SplitText
@@ -114,7 +114,7 @@ export default function Home() {
           ))}
           <Image
             alt="my vs-code"
-            data-aos="fade-up"
+            data-aos="fade-up "
             src="/vscode.png"
             height={100}
             width={600}

@@ -1,6 +1,5 @@
 "use client";
 import Sidebar from "@/components/Sidebar";
-import Title from "@/components/Title";
 import Link from "next/link";
 
 const letters = [
@@ -20,7 +19,9 @@ export default function Letters() {
       {/* Konten utama */}
       <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400 ">
         <div className="py-30 space-y-6">
-          <Title>Share my Knowledges</Title>
+          <h1 className="text-white text-3xl md:text-5xl">
+            Share my Knowledges
+          </h1>
           <p>
             I write my experiences, reflections and learnings here, follow my
             progress

@@ -21,7 +21,9 @@ export default function Letters2() {
             Back
           </Link>
           <div className="py-10 space-y-6">
-            <Title>How I learning Programming?</Title>
+            <h1 className="text-white text-3xl md:text-5xl">
+              How I learning Programming?
+            </h1>
             <p>
               I write my experiences, reflections and learnings here, follow my
               progress

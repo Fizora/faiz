@@ -22,16 +22,19 @@ export default function SocialMedia() {
         <section className="py-30 space-y-6">
           <Title>My Social Media</Title>
           {sosmed.map((item) => (
-            <div className="my-5 rounded-sm border border-zinc-800 bg-zinc-900 flex items-center justify-between p-2">
+            <div
+              className="my-5 rounded-sm border border-zinc-800 bg-zinc-900 flex items-center justify-between p-2"
+              data-aos="fade-up"
+            >
               <div className="flex items-center gap-2">
                 <span>{item.icon}</span>
                 <h1>{item.name}</h1>
               </div>
-              <Button>
-                <a href="" target="_blank">
+              <div className="px-5 py-1.5 rounded-sm bg-zinc-900 w-max border border-zinc-700 hover:text-white cursor-pointer">
+                <a key={item.link} href={item.link} target="_blank">
                   Visit
                 </a>
-              </Button>
+              </div>
             </div>
           ))}
         </section>

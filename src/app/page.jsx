@@ -6,7 +6,9 @@ import Sidebar from "@/components/Sidebar";
 import Button from "@/components/Button";
 import SplitText from "@/components/ui/SplitText";
 import { Send } from "lucide-react";
-import Paraf from "@/components/Paraf";
+import Title from "@/components/Title";
+import Subtitle from "@/components/Subtitle";
+import Badge from "@/components/Badge";
 
 export default function Home() {
   useEffect(() => {
@@ -16,12 +18,45 @@ export default function Home() {
     });
   }, []);
 
+  const about = [
+    {
+      paraf:
+        "  I’m a full-stack application developer specializing in JavaScript and TypeScript, and I also have experience working with Laravel 12.",
+      delay: 0,
+    },
+    {
+      paraf:
+        " I’m currently a 12th-grade student at a vocational high school and will graduate in 2026.",
+      delay: 100,
+    },
+    {
+      paraf:
+        "In my free time, I enjoy reading books, going to the gym, coding, building projects, and running 10 km while appreciating my surroundings.",
+      delay: 200,
+    },
+    {
+      paraf:
+        "My goal is to become a developer who can contribute by providing effective and efficient solutions for various needs.",
+      delay: 300,
+    },
+    {
+      paraf:
+        " Feel free to follow my journey and projects on this portfolio website. If you need web services for your business or are looking to hire someone for your startup, you can reach me via email or WhatsApp!",
+      delay: 400,
+    },
+  ];
+
   const skill = [
     { id: 1, name: "HTML5", precentage: "95%" },
     { id: 2, name: "CSS3", precentage: "87%" },
-    { id: 4, name: "Javascript", precentage: "75%" },
+    { id: 3, name: "Javascript", precentage: "75%" },
+    { id: 4, name: "PHP", precentage: "72%" },
     { id: 5, name: "Typescript", precentage: "73%" },
-    { id: 6, name: "TailwindCSS", precentage: "86%" },
+    { id: 6, name: "Python", precentage: "80%" },
+    { id: 7, name: "TailwindCSS", precentage: "86%" },
+    { id: 8, name: "React", precentage: "95%" },
+    { id: 9, name: "Laravel", precentage: "84%" },
+    { id: 10, name: "Odoo 18", precentage: "68%" },
   ];
 
   return (
@@ -34,7 +69,7 @@ export default function Home() {
         <section className="py-30 space-y-6">
           <SplitText
             text="Welcome Guys👋"
-            className="text-3xl md:text-6xl text-white font-bold"
+            className="text-3xl md:text-5xl text-white font-bold"
             delay={100}
             duration={0.6}
             ease="power3.out"
@@ -61,32 +96,22 @@ export default function Home() {
 
         {/* about */}
         <section className="py-30 space-y-6">
-          <h1 className="text-3xl md:text-5xl text-white font-semibold">
+          <Title className="text-3xl md:text-5xl text-white font-semibold">
             About.
-          </h1>
-          <Paraf>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos facilis
-            aut soluta numquam ad, debitis accusamus accusantium quae molestias,
-            amet dolores animi earum, sapiente nulla similique aliquid
-            distinctio.
-          </Paraf>
-          <Paraf>
-            Reiciendis tenetur ratione impedit illo voluptate consectetur
-            consequatur aliquid, mollitia autem expedita voluptas hic itaque
-            possimus cum ab id quas qui tempora!
-          </Paraf>
-          <Paraf>
-            Distinctio, officiis quis, necessitatibus rerum harum, explicabo
-            dolores commodi alias tempora dolore quae praesentium quod magnam.
-          </Paraf>
+          </Title>
+          {about.map((item) => (
+            <div data-aos="fade-up" data-aos-delay={item.delay} className="">
+              <p>{item.paraf}</p>
+            </div>
+          ))}
         </section>
 
         {/* skills */}
         <section className="py-16 space-y-6">
-          <h1 className="text-3xl md:text-5xl text-white font-semibold">
-            My Skills.
-          </h1>
-          <p>
+          <Title className="text-3xl md:text-5xl text-white font-semibold">
+            Skills.
+          </Title>
+          <p data-aos="fade-up">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
             laboriosam soluta quo aperiam suscipit consequatur praesentium id
             earum corporis facilis.
@@ -98,7 +123,9 @@ export default function Home() {
               <thead className="bg-zinc-800 text-white">
                 <tr>
                   <th className="px-3 py-2 border border-zinc-700">ID</th>
-                  <th className="px-3 py-2 border border-zinc-700">Name</th>
+                  <th className="px-3 py-2 border border-zinc-700">
+                    Language/Framework
+                  </th>
                   <th className="px-3 py-2 border border-zinc-700">
                     Percentage
                   </th>
@@ -120,6 +147,28 @@ export default function Home() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+        {/* Experience */}
+        <section className="py-30 space-y-6">
+          <div className="space-y-4">
+            <Title>Experience.</Title>
+            <p>explore the history of my experience.</p>
+            <Subtitle>April-Oktober 2025</Subtitle>
+            <p>
+              Develop and maintain the school institution's web management
+              system, become a tech lead in the management team, and develop and
+              head the technical division of Odoo Pesantren
+            </p>
+            <div className="">
+              <a href="https://aplikasi.dqi.ac.id" target="_blank">
+                aplikasi.dqi.ac.id
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Badge>Python</Badge>
+              <Badge>Odoo 18</Badge>
+            </div>
           </div>
         </section>
       </main>

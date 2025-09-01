@@ -2,7 +2,7 @@
 import Sidebar from "@/components/Sidebar";
 import Development from "@/components/Development";
 
-export default function Blog() {
+export default function Letters() {
   return (
     <div className="min-h-screen flex flex-col md:flex-row max-w-4xl mx-auto">
       {/* Sidebar */}

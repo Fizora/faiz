@@ -10,6 +10,7 @@ import Title from "@/components/Title";
 import Subtitle from "@/components/Subtitle";
 import Badge from "@/components/Badge";
 import Link from "@/components/Link";
+import Image from "next/image";
 
 export default function Home() {
   useEffect(() => {
@@ -107,6 +108,7 @@ export default function Home() {
               <p>{item.paraf}</p>
             </div>
           ))}
+          <Image src="/vscode.png" height={100} width={600}></Image>
         </section>
 
         {/* skills */}
@@ -157,30 +159,44 @@ export default function Home() {
           <div className="space-y-4">
             <Title>Experience.</Title>
             <p>explore the history of my experience.</p>
-            <Subtitle>April-Oktober 2025</Subtitle>
-            <p>
-              Develop and maintain the school institution's web management
-              system, become a tech lead in the management team, and develop and
-              head the technical division of Odoo Pesantren
-            </p>
-            <div className="flex items-center gap-4">
-              <Link>
-                <a href="https://aplikasi.dqi.ac.id" target="_blank">
-                  aplikasi.dqi.ac.id
-                </a>
-              </Link>
-              <Link>
-                <a
-                  href="https://odoo-pesantren.gitbook.io/odoo-pesantren/"
-                  target="_blank"
-                >
-                  odoo-pesantren.gitbok.io
-                </a>
-              </Link>
-            </div>
-            <div className="flex items-center gap-2">
-              <Badge>Python</Badge>
-              <Badge>Odoo 18</Badge>
+
+            {/* experience #1 */}
+            <div className="space-y-6 py-3 ">
+              <Subtitle>April-Oktober 2025</Subtitle>
+              {/* link */}
+              <div className="flex items-center flex-wrap gap-4 ">
+                <Link>
+                  <a href="https://aplikasi.dqi.ac.id" target="_blank">
+                    aplikasi.dqi.ac.id
+                  </a>
+                </Link>
+                <Link>
+                  <a
+                    href="https://odoo-pesantren.gitbook.io/odoo-pesantren/"
+                    target="_blank"
+                  >
+                    odoo-pesantren.gitbok.io
+                  </a>
+                </Link>
+                <Link>
+                  <a href="https://ubig.co.id" target="_blank">
+                    ubig.co.id
+                  </a>
+                </Link>
+              </div>
+              {/* explain */}
+              <p>
+                Developed and maintained the Islamic school management system at
+                UBIG, served as the technical leader within the management team,
+                and developed and led the technical division of Odoo Pesantren.
+              </p>
+              <Image src="/odoo-pesantren.png" height={100} width={600}></Image>
+              {/* category badge stack and company */}
+              <div className="flex items-center gap-2">
+                <Badge>Python</Badge>
+                <Badge>Odoo 18</Badge>
+                <Badge>Internship</Badge>
+              </div>
             </div>
           </div>
         </section>

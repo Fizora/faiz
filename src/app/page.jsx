@@ -9,6 +9,7 @@ import { Send } from "lucide-react";
 import Title from "@/components/Title";
 import Subtitle from "@/components/Subtitle";
 import Badge from "@/components/Badge";
+import Link from "@/components/Link";
 
 export default function Home() {
   useEffect(() => {
@@ -57,6 +58,8 @@ export default function Home() {
     { id: 8, name: "React", precentage: "95%" },
     { id: 9, name: "Laravel", precentage: "84%" },
     { id: 10, name: "Odoo 18", precentage: "68%" },
+    { id: 11, name: "Express JS", precentage: "54%" },
+    { id: 12, name: "Hono JS", precentage: "5%" },
   ];
 
   return (
@@ -160,10 +163,20 @@ export default function Home() {
               system, become a tech lead in the management team, and develop and
               head the technical division of Odoo Pesantren
             </p>
-            <div className="">
-              <a href="https://aplikasi.dqi.ac.id" target="_blank">
-                aplikasi.dqi.ac.id
-              </a>
+            <div className="flex items-center gap-4">
+              <Link>
+                <a href="https://aplikasi.dqi.ac.id" target="_blank">
+                  aplikasi.dqi.ac.id
+                </a>
+              </Link>
+              <Link>
+                <a
+                  href="https://odoo-pesantren.gitbook.io/odoo-pesantren/"
+                  target="_blank"
+                >
+                  odoo-pesantren.gitbok.io
+                </a>
+              </Link>
             </div>
             <div className="flex items-center gap-2">
               <Badge>Python</Badge>

@@ -1,10 +1,16 @@
-import { Link2 } from "lucide-react";
+import { ArrowRight, Link2 } from "lucide-react";
+import { useState, useTransition } from "react";
 
 export default function Link({ children }) {
   return (
     <>
-      <div className="hover:text-white hover:border hover:border-b-white transition-all duration-300 flex items-center gap-2 cursor-pointer">
-        <Link2 />
+      <div
+        onMouseOver={() => setOpen(!open)}
+        className="bg-zinc-800 px-2 rounded-full hover:text-white group w-max  transition-all duration-300 flex items-center gap-2 cursor-pointer"
+      >
+        <Link2 size={20} />
+        {children}
+        <ArrowRight className="group-hover:rotate-45" size={15} />
       </div>
     </>
   );

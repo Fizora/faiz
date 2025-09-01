@@ -66,19 +66,22 @@ export default function Sidebar() {
           </p>
         </header>
 
-        <nav className="flex flex-col gap-3 mt-10">
+        <nav className="flex flex-col gap-4 mt-10">
           {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`px-2 py-1 rounded-sm hover:text-white ${
-                active === item.href
-                  ? "text-white font-semibold"
-                  : "text-zinc-500"
-              }`}
-            >
-              {item.name}
-            </Link>
+            <div className="relative  group cursor-pointer w-max">
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`px-2 py-1 rounded-sm group-hover:text-white ${
+                  active === item.href
+                    ? "text-white font-semibold"
+                    : "text-zinc-500"
+                }`}
+              >
+                {item.name}
+              </Link>
+              <span className="absolute left-0 bottom-0 transition-all duration-500 w-0 h-[1]   group-hover:w-full group-hover:bg-white"></span>
+            </div>
           ))}
         </nav>
       </aside>

@@ -11,6 +11,7 @@ import Subtitle from "@/components/Subtitle";
 import Badge from "@/components/Badge";
 import Link from "@/components/Link";
 import Image from "next/image";
+import { frame } from "motion";
 
 export default function Home() {
   useEffect(() => {
@@ -48,19 +49,22 @@ export default function Home() {
     },
   ];
 
-  const skill = [
+  const language = [
     { id: 1, name: "HTML5", precentage: "95%" },
     { id: 2, name: "CSS3", precentage: "87%" },
     { id: 3, name: "Javascript", precentage: "75%" },
     { id: 4, name: "PHP", precentage: "72%" },
     { id: 5, name: "Typescript", precentage: "73%" },
     { id: 6, name: "Python", precentage: "80%" },
-    { id: 7, name: "TailwindCSS", precentage: "86%" },
-    { id: 8, name: "React", precentage: "95%" },
-    { id: 9, name: "Laravel", precentage: "84%" },
-    { id: 10, name: "Odoo 18", precentage: "68%" },
-    { id: 11, name: "Express JS", precentage: "54%" },
-    { id: 12, name: "Hono JS", precentage: "5%" },
+  ];
+
+  const framework = [
+    { id: 1, name: "TailwindCSS", precentage: "86%" },
+    { id: 2, name: "React", precentage: "95%" },
+    { id: 3, name: "Laravel", precentage: "84%" },
+    { id: 4, name: "Express JS", precentage: "54%" },
+    { id: 5, name: "Odoo 18", precentage: "68%" },
+    { id: 6, name: "Hono JS", precentage: "5%" },
   ];
 
   return (
@@ -108,7 +112,13 @@ export default function Home() {
               <p>{item.paraf}</p>
             </div>
           ))}
-          <Image src="/vscode.png" height={100} width={600}></Image>
+          <Image
+            alt="my vs-code"
+            data-aos="fade-up"
+            src="/vscode.png"
+            height={100}
+            width={600}
+          ></Image>
         </section>
 
         {/* skills */}
@@ -123,29 +133,73 @@ export default function Home() {
           </p>
 
           {/* tabel responsif */}
+
           <div className="overflow-x-auto">
+            <div className="pt-10 ">
+              <Subtitle>Language</Subtitle>
+              <p>Language that I use</p>
+            </div>
             <table className="w-full border-collapse bg-zinc-900 border border-zinc-700 text-sm md:text-base">
               <thead className="bg-zinc-800 text-white">
                 <tr>
-                  <th className="px-3 py-2 border border-zinc-700">ID</th>
-                  <th className="px-3 py-2 border border-zinc-700">
-                    Language/Framework
+                  <th className="px-3 py-2 border border-zinc-700 cursor-default">
+                    ID
                   </th>
-                  <th className="px-3 py-2 border border-zinc-700">
+                  <th className="px-3 py-2 border border-zinc-700 cursor-default">
+                    Language
+                  </th>
+                  <th className="px-3 py-2 border border-zinc-700 cursor-default">
                     Percentage
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {skill.map((item) => (
+                {language.map((item) => (
                   <tr key={item.id} className="text-center">
-                    <td className="px-3 py-2 border border-zinc-700">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
                       {item.id}
                     </td>
-                    <td className="px-3 py-2 border border-zinc-700">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
                       {item.name}
                     </td>
-                    <td className="px-3 py-2 border border-zinc-700">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                      {item.precentage}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="overflow-x-auto">
+            {/* framework */}
+            <div className="pt-10">
+              <Subtitle>Framework</Subtitle>
+              <p>framework that I use</p>
+            </div>
+            <table className="w-full border-collapse bg-zinc-900 border border-zinc-700 text-sm md:text-base">
+              <thead className="bg-zinc-800 text-white">
+                <tr>
+                  <th className="px-3 py-2 border border-zinc-700 cursor-default">
+                    ID
+                  </th>
+                  <th className="px-3 py-2 border border-zinc-700 cursor-default">
+                    Framework
+                  </th>
+                  <th className="px-3 py-2 border border-zinc-700 cursor-default">
+                    Percentage
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {framework.map((item) => (
+                  <tr key={item.id} className="text-center">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                      {item.id}
+                    </td>
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                      {item.name}
+                    </td>
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
                       {item.precentage}
                     </td>
                   </tr>
@@ -162,7 +216,7 @@ export default function Home() {
 
             {/* experience #1 */}
             <div className="space-y-6 py-3 ">
-              <Subtitle>April-Oktober 2025</Subtitle>
+              <Subtitle>April - Present 2025</Subtitle>
               {/* link */}
               <div className="flex items-center flex-wrap gap-4 ">
                 <Link>
@@ -190,7 +244,12 @@ export default function Home() {
                 UBIG, served as the technical leader within the management team,
                 and developed and led the technical division of Odoo Pesantren.
               </p>
-              <Image src="/odoo-pesantren.png" height={100} width={600}></Image>
+              <Image
+                alt="odoo pesantren"
+                src="/odoo-pesantren.png"
+                height={100}
+                width={600}
+              ></Image>
               {/* category badge stack and company */}
               <div className="flex items-center gap-2">
                 <Badge>Python</Badge>

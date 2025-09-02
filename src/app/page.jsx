@@ -112,18 +112,46 @@ export default function Home() {
           <Title className="text-3xl md:text-5xl text-white font-semibold">
             About.
           </Title>
-          {about.map((item) => (
-            <div data-aos="fade-up" data-aos-delay={item.delay} className="">
-              <p>{item.paraf}</p>
-            </div>
-          ))}
+          <p>
+            I’m a full-stack application developer specializing in JavaScript
+            and TypeScript, and I also have experience working with Laravel 12.
+          </p>
+          <p>
+            I’m currently a 12th-grade student at a vocational high school and
+            will graduate in 2026.
+          </p>
           <Image
-            alt="my vs-code"
+            alt="hiking in Panderman Mount"
             data-aos="fade-up "
-            src="/vscode.png"
+            src="/profile.jpg"
             height={100}
             width={600}
           ></Image>
+          <p>
+            In my free time, I enjoy reading books, going to the gym, coding,
+            building projects, and running 10km while appreciating the
+            environment, sometimes on certain days I go to tourist attractions
+            such as hiking, or going to the beach with my friends.
+          </p>
+          <Image
+            alt="My Group"
+            data-aos="fade-up "
+            src="/hiking-group.jpg"
+            height={100}
+            width={600}
+          ></Image>
+          <p>
+            This is me and my friends when we climbed{" "}
+            <span>
+              <a
+                href="https://maps.app.goo.gl/9BU4afDhkH281FHA8"
+                className="hover:text-white cursor-pointer border-b border-zinc-400 hover:border-white transition-all duration-300"
+              >
+                Mount Panderman
+              </a>
+            </span>
+            , at that time I was still an intern at UBIG Malang
+          </p>
         </section>
 
         {/* skills */}
@@ -161,13 +189,13 @@ export default function Home() {
               <tbody>
                 {language.map((item) => (
                   <tr key={item.id} className="text-center">
-                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 transition-all duration-300 cursor-default">
                       {item.id}
                     </td>
-                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 transition-all duration-300 cursor-default">
                       {item.name}
                     </td>
-                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 transition-all duration-300 cursor-default">
                       {item.precentage}
                     </td>
                   </tr>
@@ -198,13 +226,13 @@ export default function Home() {
               <tbody>
                 {framework.map((item) => (
                   <tr key={item.id} className="text-center">
-                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 transition-all duration-300 cursor-default">
                       {item.id}
                     </td>
-                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 transition-all duration-300 cursor-default">
                       {item.name}
                     </td>
-                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 cursor-default">
+                    <td className="px-3 py-2 border border-zinc-700 hover:text-amber-800 transition-all duration-300 cursor-default">
                       {item.precentage}
                     </td>
                   </tr>

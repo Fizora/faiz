@@ -22,7 +22,7 @@ export default function Letters2() {
           </Link>
           <div className="py-10 space-y-6">
             <h1 className="text-white text-3xl md:text-5xl">
-              How I learning Programming?
+              I Make police System
             </h1>
             <p>
               I write my experiences, reflections and learnings here, follow my

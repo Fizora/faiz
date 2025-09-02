@@ -4,6 +4,11 @@ import Link from "next/link";
 
 const letters = [
   {
+    title: "I Make Police System",
+    date: "August 3, 2025",
+    link: "/letters/letters2",
+  },
+  {
     title: "How I learning Programming?",
     date: "August 1, 2025",
     link: "/letters/letters1",
@@ -31,7 +36,7 @@ export default function Letters() {
           <Link
             key={item.link}
             href={item.link}
-            className="space-y-3 flex items-center justify-between"
+            className="py-2 rounded-sm space-y-3 flex justify-between"
           >
             <p className="text-white">{item.title}</p>
             <p>{item.date}</p>

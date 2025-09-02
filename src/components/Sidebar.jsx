@@ -11,6 +11,7 @@ export default function Sidebar() {
     { name: "Showcase", href: "/showcase" },
     { name: "Article", href: "/letters" },
     { name: "Project", href: "/project" },
+    { name: "Services", href: "/services" },
     { name: "Social Media", href: "/sosmed" },
   ];
 
@@ -66,7 +67,7 @@ export default function Sidebar() {
           </p>
         </header>
 
-        <nav className="flex flex-col gap-4 mt-10">
+        <nav className="flex flex-col gap-3 mt-10">
           {navItems.map((item) => (
             <Link
               key={item.href}

@@ -107,7 +107,7 @@ export default function Home() {
             text={["Welcome Everyone 👋", "I'm Faiz", "Software Engineer⚙️"]}
             typingSpeed={75}
             pauseDuration={1500}
-            className="text-5xl"
+            className="text-5xl h-20 md:h-0"
             showCursor={true}
             cursorCharacter="|"
           />

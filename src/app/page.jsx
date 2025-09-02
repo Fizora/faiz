@@ -103,14 +103,16 @@ export default function Home() {
             rootMargin="-100px"
             textAlign="center"
           /> */}
-          <TextType
-            text={["Welcome Everyone 👋", "I'm Faiz", "Software Engineer⚙️"]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            className="text-5xl h-20 md:h-0"
-            showCursor={true}
-            cursorCharacter="|"
-          />
+          <div className="h-30">
+            <TextType
+              text={["Welcome Everyone 👋", "I'm Faiz", "Software Engineer⚙️"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              className="text-5xl"
+              showCursor={true}
+              cursorCharacter="|"
+            />
+          </div>
           <span className="flex items-center gap-2 px-3 py-1  rounded-full border border-zinc-700 w-max">
             <IoLocationSharp size={15} />
             <p>East Java, Indonesia</p>

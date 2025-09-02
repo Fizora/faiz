@@ -289,7 +289,7 @@ export default function Home() {
             <p>explore the history of my experience.</p>
 
             {/* experience #1 */}
-            <div className="space-y-6 py-3 ">
+            <div className="space-y-6 py-3">
               <Subtitle>April - Present 2025</Subtitle>
               {/* LinkWeb */}
               <div className="flex items-center flex-wrap gap-4 ">

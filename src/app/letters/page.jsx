@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
 import Link from "next/link";
 import { useState } from "react";
@@ -66,6 +67,7 @@ export default function Letters() {
         ) : (
           <p className="text-zinc-500">No letters found.</p>
         )}
+        <Footer />
       </main>
     </div>
   );

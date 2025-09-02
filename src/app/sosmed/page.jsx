@@ -4,6 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 import Button from "@/components/Button";
 import Title from "@/components/Title";
+import Footer from "@/components/Footer";
 const sosmed = [
   { icon: <FaTiktok />, name: "Tiktok", link: "" },
   { icon: <FaYoutube />, name: "YouTube", link: "" },
@@ -38,6 +39,7 @@ export default function SocialMedia() {
             </div>
           ))}
         </section>
+        <Footer />
       </main>
     </div>
   );

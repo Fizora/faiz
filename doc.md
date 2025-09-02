@@ -1,5 +1,4 @@
 # 1. Struktur Database Utama
-
 (Disederhanakan, tapi scalable untuk ERP yayasan)
 
 A. Master Data
@@ -91,6 +90,5 @@ Rekap keuangan yayasan real-time dari semua unit.
 Kalau mau, saya bisa buatkan mockup dashboard ERP yayasan supaya nanti developer bisa langsung mengerjakan sesuai visual dan alur yang kita rancang.
 Mockup ini nanti akan berisi tampilan untuk:
 Yayasan (monitor semua unit)
-
 Sekolah (monitor operasional internal)
 Orang tua (monitor anak & tagihan)

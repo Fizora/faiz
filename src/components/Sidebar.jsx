@@ -52,7 +52,7 @@ export default function Sidebar() {
       {/* sidebar desktop */}
       <aside className="hidden md:flex md:flex-col md:w-58 h-screen sticky top-0 py-30  px-6">
         <header className="space-y-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <Image
               src="/profile.jpg"
               alt="My Profile"

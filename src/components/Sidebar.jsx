@@ -9,7 +9,7 @@ export default function Sidebar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Showcase", href: "/showcase" },
-    { name: "Letters", href: "/letters" },
+    { name: "Article", href: "/letters" },
     { name: "Project", href: "/project" },
     { name: "Social Media", href: "/sosmed" },
   ];

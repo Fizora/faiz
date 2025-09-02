@@ -1,7 +1,7 @@
 "use client";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import Button from "@/components/Button";
 import SplitText from "@/components/ui/SplitText";
@@ -11,7 +11,7 @@ import Subtitle from "@/components/Subtitle";
 import Badge from "@/components/Badge";
 import Link from "@/components/Link";
 import Image from "next/image";
-import { frame } from "motion";
+import { IoLocationSharp } from "react-icons/io5";
 
 export default function Home() {
   useEffect(() => {
@@ -88,12 +88,17 @@ export default function Home() {
             rootMargin="-100px"
             textAlign="center"
           />
+          <span className="flex items-center gap-2 px-3 py-1  rounded-full border border-zinc-700 w-max">
+            <IoLocationSharp size={15} />
+            <p>East Java, Indonesia</p>
+          </span>
           <p className="leading-relaxed" data-aos="fade-up">
             My name is Faiz, I am a developer, I am very addicted to JavaScript
             and Typescript. I will build useful software to help many small and
             micro businesses that need a fast website and try to attract more
             customers.
           </p>
+          {/* button and time  */}
           <Button>
             <a href="#contact" className="flex items-center gap-2">
               Contact Me
@@ -210,7 +215,7 @@ export default function Home() {
         </section>
         {/* Experience */}
         <section className="py-30 space-y-6">
-          <div className="space-y-4">
+          <div className="space-y-4" data-aos="fade-up" data-aos-delay="100">
             <Title>Experience.</Title>
             <p>explore the history of my experience.</p>
 

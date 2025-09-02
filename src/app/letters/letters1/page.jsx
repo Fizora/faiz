@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import Sidebar from "@/components/Sidebar";
-import Title from "@/components/Title";
 import { ArrowLeft } from "lucide-react";
 
 export default function Letters1() {
@@ -23,67 +21,21 @@ export default function Letters1() {
           </Link>
           <div className="py-10 space-y-6">
             <h1 className="text-white text-3xl md:text-5xl">
-              How I learning Programming?
+              My Goals In 2025
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              dolorem consectetur vitae magni laborum placeat vero, nisi debitis
-              nulla perferendis non. Hic rerum vitae non reprehenderit. Nemo
-              voluptatum ullam qui. Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. In, debitis est. Odit recusandae facere vitae in
-              iusto corporis! Dolorum odio vitae doloribus esse commodi mollitia
-              at, veritatis optio pariatur non?
+              In 2025, I have a plan and set a goal to learn programming
+              languages, stacks, frameworks, and databases.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              dolorem consectetur vitae magni laborum placeat vero, nisi debitis
-              nulla perferendis non. Hic rerum vitae non reprehenderit. Nemo
-              voluptatum ullam qui.
+              In this article, I want to share my experience of learning coding
+              for several years. I started in second grade because programming
+              jobs were popular at the time. I also wanted to find a high-paying
+              job, and searching the internet led me to the world of web
+              development and coding.
             </p>
-
-            <p>
-              <Image
-                alt="my vs-code"
-                data-aos="fade-up "
-                src="/vscode.png"
-                height={100}
-                width={600}
-              ></Image>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              dolorem consectetur vitae magni laborum placeat vero, nisi debitis
-              nulla perferendis non. Hic rerum vitae non reprehenderit. Nemo
-              voluptatum ullam qui.
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa,
-              consectetur accusantium. Nulla eligendi repellendus iure placeat
-              veniam assumenda repellat consequuntur ratione soluta sequi nihil,
-              alias officiis, sapiente totam ad odio?
-            </p>
+            <p></p>
           </div>
-          <p>
-            <Image
-              alt="scrum sprint method"
-              data-aos="fade-up "
-              src="/scrum-sprints.jpg"
-              height={100}
-              width={600}
-            ></Image>
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
-            itaque nemo sequi dolore, exercitationem quod placeat accusantium,
-            tempora quisquam ut porro saepe. Fugiat voluptatem aliquam nam
-            quidem ipsum itaque magnam?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-            explicabo, asperiores laborum iusto eaque repellat illum!
-            Laudantium, culpa molestiae assumenda eos id est repellendus natus
-            ipsam facere consectetur! Accusantium, nam.
-          </p>
         </section>
       </main>
     </div>

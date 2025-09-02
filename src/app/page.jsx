@@ -12,6 +12,7 @@ import Badge from "@/components/Badge";
 import Link from "@/components/Link";
 import Image from "next/image";
 import { IoLocationSharp } from "react-icons/io5";
+import TextType from "@/components/ui/TextType";
 
 export default function Home() {
   useEffect(() => {
@@ -75,7 +76,7 @@ export default function Home() {
       <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400">
         {/* hero */}
         <section className="py-30 space-y-6">
-          <SplitText
+          {/* <SplitText
             text="Welcome Guys👋"
             className="text-3xl md:text-5xl text-white font-bold"
             delay={100}
@@ -87,6 +88,14 @@ export default function Home() {
             threshold={0.1}
             rootMargin="-100px"
             textAlign="center"
+          /> */}
+          <TextType
+            text={["Welcome Everyone 👋", "I'm Faiz", "Software Engineer⚙️"]}
+            typingSpeed={75}
+            pauseDuration={1500}
+            className="text-5xl"
+            showCursor={true}
+            cursorCharacter="|"
           />
           <span className="flex items-center gap-2 px-3 py-1  rounded-full border border-zinc-700 w-max">
             <IoLocationSharp size={15} />

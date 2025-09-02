@@ -9,17 +9,31 @@ import { Send } from "lucide-react";
 import Title from "@/components/Title";
 import Subtitle from "@/components/Subtitle";
 import Badge from "@/components/Badge";
-import Link from "@/components/Link";
+import LinkWeb from "@/components/LinkWeb";
 import Image from "next/image";
+import Link from "next/link";
 import { IoLocationSharp } from "react-icons/io5";
 import TextType from "@/components/ui/TextType";
+import Footer from "@/components/Footer";
+import { PiBagSimpleFill } from "react-icons/pi";
 
 export default function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: false, // biar bisa muncul berulang
     });
+
+    // Refresh AOS setiap kali scroll supaya animasi muncul lagi
+    const handleScroll = () => {
+      AOS.refresh();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const about = [
@@ -101,19 +115,27 @@ export default function Home() {
             <IoLocationSharp size={15} />
             <p>East Java, Indonesia</p>
           </span>
-          <p className="leading-relaxed" data-aos="fade-up">
+          <p className="leading-relaxed" data-aos="zoom-in-up">
             My name is Faiz, I am a developer, I am very addicted to JavaScript
             and Typescript. I will build useful software to help many small and
             micro businesses that need a fast website and try to attract more
             customers.
           </p>
           {/* button and time  */}
-          <Button>
-            <a href="#contact" className="flex items-center gap-2">
-              Contact Me
-              <Send size={18} />
-            </a>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button>
+              <a href="#contact" className="flex items-center gap-2">
+                Contact Me
+                <Send size={18} />
+              </a>
+            </Button>
+            <Button>
+              <Link href="/project" className="flex items-center gap-2">
+                My Project
+                <PiBagSimpleFill size={18} />
+              </Link>
+            </Button>
+          </div>
         </section>
 
         {/* about */}
@@ -131,10 +153,11 @@ export default function Home() {
           </p>
           <Image
             alt="hiking in Panderman Mount"
-            data-aos="fade-up "
+            data-aos="zoom-in-up "
             src="/profile.jpg"
             height={100}
             width={600}
+            data-aos="zoom-in-up"
           ></Image>
           <p>
             In my free time, I enjoy reading books, going to the gym, coding,
@@ -144,10 +167,11 @@ export default function Home() {
           </p>
           <Image
             alt="My Group"
-            data-aos="fade-up "
+            data-aos="zoom-in-up "
             src="/hiking-group.jpg"
             height={100}
             width={600}
+            data-aos="zoom-in-up"
           ></Image>
           <p>
             This is me and my friends when we climbed{" "}
@@ -168,7 +192,7 @@ export default function Home() {
           <Title className="text-3xl md:text-5xl text-white font-semibold">
             Skills.
           </Title>
-          <p data-aos="fade-up">
+          <p data-aos="zoom-in-up">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
             laboriosam soluta quo aperiam suscipit consequatur praesentium id
             earum corporis facilis.
@@ -181,7 +205,10 @@ export default function Home() {
               <Subtitle>Language</Subtitle>
               <p>Language that I use</p>
             </div>
-            <table className="w-full border-collapse bg-zinc-900 border border-zinc-700 text-sm md:text-base">
+            <table
+              data-aos="zoom-in-up"
+              className="w-full border-collapse bg-zinc-900 border border-zinc-700 text-sm md:text-base"
+            >
               <thead className="bg-zinc-800 text-white">
                 <tr>
                   <th className="px-3 py-2 border border-zinc-700 cursor-default">
@@ -218,7 +245,10 @@ export default function Home() {
               <Subtitle>Framework</Subtitle>
               <p>framework that I use</p>
             </div>
-            <table className="w-full border-collapse bg-zinc-900 border border-zinc-700 text-sm md:text-base">
+            <table
+              data-aos="zoom-in-up"
+              className="w-full border-collapse bg-zinc-900 border border-zinc-700 text-sm md:text-base"
+            >
               <thead className="bg-zinc-800 text-white">
                 <tr>
                   <th className="px-3 py-2 border border-zinc-700 cursor-default">
@@ -252,33 +282,33 @@ export default function Home() {
         </section>
         {/* Experience */}
         <section className="py-30 space-y-6">
-          <div className="space-y-4" data-aos="fade-up" data-aos-delay="100">
+          <div className="space-y-4" data-aos="zoom-in-up" data-aos-delay="100">
             <Title>Experience.</Title>
             <p>explore the history of my experience.</p>
 
             {/* experience #1 */}
             <div className="space-y-6 py-3 ">
               <Subtitle>April - Present 2025</Subtitle>
-              {/* link */}
+              {/* LinkWeb */}
               <div className="flex items-center flex-wrap gap-4 ">
-                <Link>
+                <LinkWeb>
                   <a href="https://aplikasi.dqi.ac.id" target="_blank">
                     aplikasi.dqi.ac.id
                   </a>
-                </Link>
-                <Link>
+                </LinkWeb>
+                <LinkWeb>
                   <a
                     href="https://odoo-pesantren.gitbook.io/odoo-pesantren/"
                     target="_blank"
                   >
                     odoo-pesantren.gitbok.io
                   </a>
-                </Link>
-                <Link>
+                </LinkWeb>
+                <LinkWeb>
                   <a href="https://ubig.co.id" target="_blank">
                     ubig.co.id
                   </a>
-                </Link>
+                </LinkWeb>
               </div>
               {/* explain */}
               <p>
@@ -301,6 +331,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </div>
   );

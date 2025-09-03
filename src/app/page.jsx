@@ -159,8 +159,7 @@ export default function Home() {
             src="/profile.jpg"
             height={100}
             width={600}
-            data-aos="zoom-in-up"
-          ></Image>
+          />
           <p>
             In my free time, I enjoy reading books, going to the gym, coding,
             building projects, and running 10km while appreciating the
@@ -173,8 +172,7 @@ export default function Home() {
             src="/hiking-group.jpg"
             height={100}
             width={600}
-            data-aos="zoom-in-up"
-          ></Image>
+          />
           <p>
             This is me and my friends when we climbed{" "}
             <span>

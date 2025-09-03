@@ -12,7 +12,7 @@ const letters = [
   // },
   {
     title: "My Goals In 2025",
-    date: "August 2, 2025",
+    date: "September 2, 2025",
     link: "/letters/letters1",
   },
 ];

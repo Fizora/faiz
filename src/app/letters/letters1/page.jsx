@@ -10,17 +10,20 @@ export default function Letters1() {
       <Sidebar />
 
       {/* Konten utama */}
-      <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400 ">
+      <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400  geist">
         <section className="py-30 space-y-6">
-          <Link
-            href={"/letters"}
-            className="flex items-center gap-2 hover:text-white"
-          >
-            <ArrowLeft size={20} />
-            Back
-          </Link>
+          <div className="flex items-center justify-between">
+            <Link
+              href={"/letters"}
+              className="flex items-center gap-2 hover:text-white"
+            >
+              <ArrowLeft size={20} />
+              Back
+            </Link>
+            <span>September 2, 2025</span>
+          </div>
           <div className="py-10 space-y-6">
-            <h1 className="text-white text-3xl md:text-5xl">
+            <h1 className="text-white font-bold text-3xl md:text-5xl mb-20">
               My Goals In 2025
             </h1>
             <p>

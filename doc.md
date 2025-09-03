@@ -1,4 +1,5 @@
 # 1. Struktur Database Utama
+
 (Disederhanakan, tapi scalable untuk ERP yayasan)
 
 A. Master Data

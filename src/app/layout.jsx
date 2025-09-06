@@ -27,6 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`${font.className} antialiased bg-zinc-950 text-white`}>
         {children}
       </body>

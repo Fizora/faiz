@@ -1,7 +1,7 @@
 import { ArrowRight, Link2 } from "lucide-react";
 import { useState, useTransition } from "react";
 
-export default function Link({ children }) {
+export default function Url({ children }) {
   return (
     <>
       <div

@@ -9,7 +9,7 @@ import { Send } from "lucide-react";
 import Title from "@/components/Title";
 import Subtitle from "@/components/Subtitle";
 import Badge from "@/components/Badge";
-import LinkWeb from "@/components/LinkWeb";
+import Url from "@/components/Url";
 import Image from "next/image";
 import Link from "next/link";
 import { IoLocationSharp } from "react-icons/io5";
@@ -289,26 +289,26 @@ export default function Home() {
             {/* experience #1 */}
             <div className="space-y-6 py-3">
               <Subtitle>April - Present 2025</Subtitle>
-              {/* LinkWeb */}
+              {/* Url */}
               <div className="flex items-center flex-wrap gap-4 ">
-                <LinkWeb>
+                <Url>
                   <a href="https://aplikasi.dqi.ac.id" target="_blank">
                     aplikasi.dqi.ac.id
                   </a>
-                </LinkWeb>
-                <LinkWeb>
+                </Url>
+                <Url>
                   <a
                     href="https://odoo-pesantren.gitbook.io/odoo-pesantren/"
                     target="_blank"
                   >
                     odoo-pesantren.gitbok.io
                   </a>
-                </LinkWeb>
-                <LinkWeb>
+                </Url>
+                <Url>
                   <a href="https://ubig.co.id" target="_blank">
                     ubig.co.id
                   </a>
-                </LinkWeb>
+                </Url>
               </div>
               {/* explain */}
               <p>

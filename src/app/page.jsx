@@ -90,19 +90,6 @@ export default function Home() {
       <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400">
         {/* hero */}
         <section className="py-30 space-y-6">
-          {/* <SplitText
-            text="Welcome Guys👋"
-            className="text-3xl md:text-5xl text-white font-bold"
-            delay={100}
-            duration={0.6}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          /> */}
           <div className="h-30">
             <TextType
               text={["Welcome Everyone 👋", "I'm Faiz", "Software Engineer⚙️"]}
@@ -118,15 +105,20 @@ export default function Home() {
             <p>East Java, Indonesia</p>
           </span>
           <p className="leading-relaxed" data-aos="zoom-in-up">
-            My name is Faiz, I am a developer, I am very addicted to JavaScript
-            and Typescript. I will build useful software to help many small and
-            micro businesses that need a fast website and try to attract more
-            customers.
+            Nama saya Faiz, saya seorang pengembang, saya sangat tertarik dengan
+            JavaScript dan TypeScript. Saya akan membangun perangkat lunak yang
+            bermanfaat untuk membantu banyak usaha kecil dan mikro yang
+            membutuhkan situs web cepat dan berusaha menarik lebih banyak
+            pelanggan.
           </p>
           {/* button and time  */}
           <div className="flex items-center gap-2">
             <Button>
-              <a href="#contact" className="flex items-center gap-2">
+              <a
+                href="https://wa.me/6285235086814"
+                target="_blank"
+                className="flex items-center gap-2"
+              >
                 Contact Me
                 <Send size={18} />
               </a>
@@ -146,12 +138,13 @@ export default function Home() {
             About.
           </Title>
           <p>
-            I’m a full-stack application developer specializing in JavaScript
-            and TypeScript, and I also have experience working with Laravel 12.
+            Saya seorang pengembang aplikasi full-stack yang berspesialisasi
+            dalam JavaScript dan TypeScript, dan saya juga berpengalaman
+            menggunakan Laravel 12.
           </p>
           <p>
-            I’m currently a 12th-grade student at a vocational high school and
-            will graduate in 2026.
+            Saat ini saya siswa kelas 12 di sebuah sekolah menengah kejuruan dan
+            akan lulus pada tahun 2026.
           </p>
           <Image
             alt="hiking in Panderman Mount"
@@ -161,10 +154,13 @@ export default function Home() {
             width={600}
           />
           <p>
-            In my free time, I enjoy reading books, going to the gym, coding,
-            building projects, and running 10km while appreciating the
-            environment, sometimes on certain days I go to tourist attractions
-            such as hiking, or going to the beach with my friends.
+            Di waktu luang, saya senang membaca buku, pergi ke gym, coding,
+            mengerjakan proyek website, dan di weekend saya olahraga lari 6-10
+            km sambil menikmati lingkungan.
+          </p>
+          <p>
+            Terkadang, pada hari-hari tertentu, saya pergi ke tempat wisata,
+            seperti daki, atau pergi ke pantai bersama teman-teman.
           </p>
           <Image
             alt="My Group"
@@ -174,16 +170,16 @@ export default function Home() {
             width={600}
           />
           <p>
-            This is me and my friends when we climbed{" "}
+            Ini aku dan teman-temanku saat kami mendaki{" "}
             <span>
               <a
                 href="https://maps.app.goo.gl/9BU4afDhkH281FHA8"
                 className="hover:text-white cursor-pointer border-b border-zinc-400 hover:border-white transition-all duration-300"
               >
-                Mount Panderman
+                Gunung Panderman
               </a>
             </span>
-            , at that time I was still an intern at UBIG Malang
+            , waktu itu saya sedang magang di UBIG Malang
           </p>
         </section>
 
@@ -193,17 +189,17 @@ export default function Home() {
             Skills.
           </Title>
           <p data-aos="zoom-in-up">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-            laboriosam soluta quo aperiam suscipit consequatur praesentium id
-            earum corporis facilis.
+            Keahlian saya meliputi bahasa pemrograman dan framework yang saya
+            gunakan, anda bisa lihat apa saja bahasa pemrograman dan Framework
+            yang saya pelajari serta persentase pemahaman saya
           </p>
 
           {/* tabel responsif */}
 
-          <div className="overflow-x-auto">
-            <div className="pt-10 ">
-              <Subtitle>Language</Subtitle>
-              <p>Language that I use</p>
+          <div className="space-y-6">
+            <div className="pt-10 space-y-6">
+              <Subtitle>Bahasa Pemrograman</Subtitle>
+              <p>Bahasa Pemrograman yang saya gunakan</p>
             </div>
             <table
               data-aos="zoom-in-up"
@@ -239,11 +235,11 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-          <div className="overflow-x-auto">
+          <div className="space-y-6">
             {/* framework */}
-            <div className="pt-10">
+            <div className="space-y-6">
               <Subtitle>Framework</Subtitle>
-              <p>framework that I use</p>
+              <p>Framework yang saya gunakan</p>
             </div>
             <table
               data-aos="zoom-in-up"
@@ -284,7 +280,7 @@ export default function Home() {
         <section className="py-30 space-y-6">
           <div className="space-y-4" data-aos="zoom-in-up" data-aos-delay="100">
             <Title>Experience.</Title>
-            <p>explore the history of my experience.</p>
+            <p>Jelajahi jejak pengalaman saya</p>
 
             {/* experience #1 */}
             <div className="space-y-6 py-3">
@@ -312,9 +308,9 @@ export default function Home() {
               </div>
               {/* explain */}
               <p>
-                Developed and maintained the Islamic school management system at
-                UBIG, served as the technical leader within the management team,
-                and developed and led the technical division of Odoo Pesantren.
+                Mengembangkan dan memelihara sistem manajemen Sekolah Islami di
+                UBIG, menjabat sebagai pemimpin teknis dalam tim manajemen, dan
+                mengembangkan serta memimpin divisi teknis Odoo Pesantren.
               </p>
               <Image
                 alt="odoo pesantren"

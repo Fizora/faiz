@@ -11,7 +11,7 @@ const letters = [
   //   link: "/letters/letters2",
   // },
   {
-    title: "My Goals In 2025",
+    title: "4 Kesalahan yang gua lakukan sebagai pengembang",
     date: "September 2, 2025",
     link: "/letters/letters1",
   },
@@ -37,8 +37,9 @@ export default function Letters() {
             Share my Knowledges
           </h1>
           <p>
-            I write my experiences, reflections and learnings here, follow my
-            progress
+            Aku menuliskan pengalaman, refleksi diri, pembelajaran dan kesalahan
+            pribadi yang saya lakukan untuk berbagi insight(pandangan) dengan
+            teman-teman.
           </p>
           {/* Search bar */}
           <div className="my-6">

@@ -67,7 +67,7 @@ export default function Showcase() {
             filteredShowcase.map((project, i) => (
               <div
                 key={i}
-                className="bg-gradient-to-br from-amber-400 to-purple-500 hover:from-cyan-500 hover:to-yellow-400 duration-600 transition-all p-1 mb-10 rounded-lg"
+                className="bg-gradient-to-br from-amber-400 to-purple-500 hover:from-cyan-500 hover:to-yellow-400 duration-600 transition-all p-[3px] mb-10 rounded-lg"
               >
                 <div className="space-y-4 py-7 px-2 rounded-sm bg-zinc-900 border border-zinc-700">
                   <h1 className="text-white text-2xl md:text-4xl">

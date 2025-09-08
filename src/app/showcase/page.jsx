@@ -3,9 +3,12 @@ import Sidebar from "@/components/Sidebar";
 import Title from "@/components/Title";
 import Image from "next/image";
 import Url from "@/components/Url";
-import Badge from "@/components/Badge";
+import { useState } from "react";
 
 export default function Showcase() {
+  const [search, setSearch] = useState("");
+
+  // daftar project
   const showcase = [
     {
       title: "Spark Property",
@@ -33,6 +36,11 @@ export default function Showcase() {
     },
   ];
 
+  // filter berdasarkan search
+  const filteredShowcase = showcase.filter((project) =>
+    project.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen flex flex-col md:flex-row max-w-4xl mx-auto">
       {/* Sidebar */}
@@ -43,34 +51,48 @@ export default function Showcase() {
         <section className="pt-30 space-y-6">
           <Title>My Showcase.</Title>
           <p>Lihat apa saja proyek-proyek demo yang saya pernah saya buat</p>
+
+          {/* Search bar */}
+          <input
+            type="text"
+            placeholder="Cari project..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full md:w-1/2 px-4 py-2 rounded-lg border border-zinc-600 bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-amber-400"
+          />
         </section>
 
-        <section className="pt-30">
-          {showcase.map((project, i) => (
-            <div className="bg-gradient-to-br from-amber-400 to-purple-500 hover:from-cyan-500 hover:to-yellow-400 duration-600 transition-all p-1 mb-10 rounded-lg">
+        <section className="pt-10">
+          {filteredShowcase.length > 0 ? (
+            filteredShowcase.map((project, i) => (
               <div
                 key={i}
-                className="space-y-4  py-7 px-2 rounded-sm bg-zinc-900 border border-zinc-700"
+                className="bg-gradient-to-br from-amber-400 to-purple-500 hover:from-cyan-500 hover:to-yellow-400 duration-600 transition-all p-1 mb-10 rounded-lg"
               >
-                <h1 className="text-white text-2xl md:text-4xl">
-                  {project.title}
-                </h1>
-                <Image
-                  alt={project.title}
-                  src={project.img}
-                  height={300}
-                  width={600}
-                />
-
-                <p>{project.desc}</p>
-                <Url>
-                  <a href={project.url} target="_blank">
-                    {project.url.replace("https://", "")}
-                  </a>
-                </Url>
+                <div className="space-y-4 py-7 px-2 rounded-sm bg-zinc-900 border border-zinc-700">
+                  <h1 className="text-white text-2xl md:text-4xl">
+                    {project.title}
+                  </h1>
+                  <Image
+                    alt={project.title}
+                    src={project.img}
+                    height={300}
+                    width={600}
+                  />
+                  <p>{project.desc}</p>
+                  <Url>
+                    <a href={project.url} target="_blank">
+                      {project.url.replace("https://", "")}
+                    </a>
+                  </Url>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="text-center text-zinc-500 mt-10">
+              Tidak ada project yang cocok dengan pencarian.
+            </p>
+          )}
         </section>
       </main>
     </div>

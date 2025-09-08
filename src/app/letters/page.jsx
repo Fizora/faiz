@@ -5,13 +5,13 @@ import Link from "next/link";
 import { useState } from "react";
 
 const letters = [
-  // {
-  //   title: "How I learning Programming?",
-  //   date: "August 3, 2025",
-  //   link: "/letters/letters2",
-  // },
   {
-    title: "4 Kesalahan yang gua lakukan sebagai pengembang",
+    title: "Gua membuat 4 website untuk bulan ini !!",
+    date: "August 8, 2025",
+    link: "/letters/letters2",
+  },
+  {
+    title: "4 Kesalahan gua sebagai pemula",
     date: "September 2, 2025",
     link: "/letters/letters1",
   },
@@ -37,10 +37,24 @@ export default function Letters() {
             Share my Knowledges
           </h1>
           <p>
-            Aku menuliskan pengalaman, refleksi diri, pembelajaran dan kesalahan
-            pribadi yang saya lakukan untuk berbagi insight(pandangan) dengan
-            teman-teman.
+            Gua menuliskan pengalaman, refleksi diri, pembelajaran dan kesalahan
+            pribadi yang gua lakukan untuk berbagi insight (pandangan).
           </p>
+
+          {/* Disclaimer */}
+          <div className="bg-red-500 border border-zinc-700 text-sm text-black rounded-md p-4">
+            <p>
+              <strong className="text-xl">Disclaimer:</strong> Artikel di blog
+              ini adalah catatan pribadi untuk berbagi pengalaman dan insight
+              sebagai developer. Tulisan ini{" "}
+              <span className="text-white">
+                tidak ditujukan sebagai materi resmi untuk klien
+              </span>{" "}
+              melainkan untuk teman-teman yang seprofesi, khususnya pengembang
+              yang masih belajar.
+            </p>
+          </div>
+
           {/* Search bar */}
           <div className="my-6">
             <input

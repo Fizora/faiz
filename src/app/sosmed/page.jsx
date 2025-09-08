@@ -7,9 +7,21 @@ import Title from "@/components/Title";
 import Footer from "@/components/Footer";
 const sosmed = [
   { icon: <FaTiktok />, name: "Tiktok", link: "" },
-  { icon: <FaYoutube />, name: "YouTube", link: "" },
-  { icon: <FaInstagram />, name: "Instagram", link: "" },
-  { icon: <FaLinkedin />, name: "Linkedin", link: "" },
+  {
+    icon: <FaYoutube />,
+    name: "YouTube",
+    link: "https://www.youtube.com/channel/UCQW0F7o0vlzMgwxgF3i-HNw",
+  },
+  {
+    icon: <FaInstagram />,
+    name: "Instagram",
+    link: "https://www.instagram.com/fizoraaa/",
+  },
+  {
+    icon: <FaLinkedin />,
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/moch-faiz-9ba4282a2/",
+  },
 ];
 
 export default function SocialMedia() {

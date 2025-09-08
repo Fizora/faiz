@@ -13,11 +13,6 @@ export default function Project() {
         <div className="text-center space-y-6">
           {/* Komponen Development */}
           <Development />
-
-          {/* Info tambahan */}
-          <p className="text-zinc-500">
-            This page is currently under development. Stay tuned for updates! 🚧
-          </p>
         </div>
       </div>
     </div>

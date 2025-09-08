@@ -33,7 +33,7 @@ export default function Letters1() {
               proses belajar gua !!
             </p>
             <p>
-              Di dalam artikel pertama ini, gua akan memberikan lu 5 kesalahan
+              Di dalam artikel pertama ini, gua akan memberikan lu 4 kesalahan
               yang gua lakukan sebagai pengembang pemula selama 3 tahun gua
               belajar pemrograman sampai gua sadar ketika gua memasuki dunia
               magang.

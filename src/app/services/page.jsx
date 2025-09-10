@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
 import Title from "@/components/Title";
 import Url from "@/components/Url";
@@ -91,6 +92,7 @@ export default function Service() {
               </div>
             ))}
           </div>
+          <Footer />
         </section>
       </main>
     </div>

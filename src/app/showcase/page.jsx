@@ -4,6 +4,7 @@ import Title from "@/components/Title";
 import Image from "next/image";
 import Url from "@/components/Url";
 import { useState } from "react";
+import Footer from "@/components/Footer";
 
 export default function Showcase() {
   const [search, setSearch] = useState("");
@@ -16,24 +17,24 @@ export default function Showcase() {
       url: "https://spark-property.vercel.app",
       desc: "Website properti dengan desain modern dan responsif. Dibuat menggunakan Next.js & Tailwind.",
     },
-    {
-      title: "Warung Bakso Pak Slamet",
-      img: "/bakso.png",
-      url: "https://bakso-pak-slamet.vercel.app",
-      desc: "Landing page sederhana untuk UMKM kuliner. Fokus pada kecepatan dan kemudahan kontak via WhatsApp.",
-    },
-    {
-      title: "CV Jaya Printing",
-      img: "/printing.png",
-      url: "https://jaya-printing.vercel.app",
-      desc: "Company profile untuk usaha percetakan. SEO dasar dioptimalkan agar mudah ditemukan di Google.",
-    },
-    {
-      title: "Toko Kopi Nusantara",
-      img: "/kopi.png",
-      url: "https://kopi-nusantara.vercel.app",
-      desc: "Mini e-commerce untuk produk kopi lokal. Fitur daftar produk dengan tombol order via WhatsApp.",
-    },
+    // {
+    //   title: "Warung Bakso Pak Slamet",
+    //   img: "/bakso.png",
+    //   url: "https://bakso-pak-slamet.vercel.app",
+    //   desc: "Landing page sederhana untuk UMKM kuliner. Fokus pada kecepatan dan kemudahan kontak via WhatsApp.",
+    // },
+    // {
+    //   title: "CV Jaya Printing",
+    //   img: "/printing.png",
+    //   url: "https://jaya-printing.vercel.app",
+    //   desc: "Company profile untuk usaha percetakan. SEO dasar dioptimalkan agar mudah ditemukan di Google.",
+    // },
+    // {
+    //   title: "Toko Kopi Nusantara",
+    //   img: "/kopi.png",
+    //   url: "https://kopi-nusantara.vercel.app",
+    //   desc: "Mini e-commerce untuk produk kopi lokal. Fitur daftar produk dengan tombol order via WhatsApp.",
+    // },
   ];
 
   // filter berdasarkan search
@@ -65,20 +66,17 @@ export default function Showcase() {
         <section className="pt-10">
           {filteredShowcase.length > 0 ? (
             filteredShowcase.map((project, i) => (
-              <div
-                key={i}
-                className="bg-gradient-to-br from-amber-400 to-purple-500 hover:from-cyan-500 hover:to-yellow-400 duration-600 transition-all p-[3px] mb-10 rounded-lg"
-              >
-                <div className="space-y-4 py-7 px-2 rounded-sm bg-zinc-900 border border-zinc-700">
-                  <h1 className="text-white text-2xl md:text-4xl">
-                    {project.title}
-                  </h1>
+              <div key={i} className=" py-[3px] mb-10 rounded-lg">
+                <div className="space-y-4">
                   <Image
                     alt={project.title}
                     src={project.img}
                     height={300}
                     width={600}
                   />
+                  <h1 className="text-white text-2xl md:text-4xl">
+                    {project.title}
+                  </h1>
                   <p>{project.desc}</p>
                   <Url>
                     <a href={project.url} target="_blank">
@@ -93,6 +91,8 @@ export default function Showcase() {
               Tidak ada project yang cocok dengan pencarian.
             </p>
           )}
+
+          <Footer />
         </section>
       </main>
     </div>

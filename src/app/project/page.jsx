@@ -9,7 +9,7 @@ export default function Project() {
       <Sidebar />
 
       {/* Konten utama */}
-      <div className="flex-1 overflow-y-auto min-h-screen flex items-center justify-center p-6">
+      <div className="flex-1  min-h-screen flex items-center justify-center p-6">
         <div className="text-center space-y-6">
           {/* Komponen Development */}
           <Development />

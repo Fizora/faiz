@@ -50,7 +50,7 @@ export default function Service() {
     <div className="min-h-screen flex flex-col md:flex-row max-w-4xl mx-auto">
       {/* Sidebar */}
       <Sidebar />
-
+{/*  create some banner to promotion  */}
       {/* Konten utama */}
       <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400">
         <section className="py-30 space-y-6">

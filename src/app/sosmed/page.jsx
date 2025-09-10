@@ -6,7 +6,11 @@ import Button from "@/components/Button";
 import Title from "@/components/Title";
 import Footer from "@/components/Footer";
 const sosmed = [
-  { icon: <FaTiktok />, name: "Tiktok", link: "" },
+  {
+    icon: <FaTiktok />,
+    name: "Tiktok",
+    link: "https://www.tiktok.com/@remember2008_?is_from_webapp=1&sender_device=pc",
+  },
   {
     icon: <FaYoutube />,
     name: "YouTube",

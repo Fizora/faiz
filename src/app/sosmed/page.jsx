@@ -9,7 +9,7 @@ const sosmed = [
   {
     icon: <FaTiktok />,
     name: "Tiktok",
-    link: "https://www.tiktok.com/@remember2008_?is_from_webapp=1&sender_device=pc",
+    link: "https://www.tiktok.com/@fizoraaa?is_from_webapp=1&sender_device=pc",
   },
   {
     icon: <FaYoutube />,

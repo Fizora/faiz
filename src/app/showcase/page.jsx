@@ -11,18 +11,18 @@ export default function Showcase() {
 
   // daftar project
   const showcase = [
-    {
-      title: "Spark Property",
-      img: "/spark.png",
-      url: "https://spark-property.vercel.app",
-      desc: "Website properti dengan desain modern dan responsif. Dibuat menggunakan Next.js & Tailwind.",
-    },
     // {
-    //   title: "Warung Bakso Pak Slamet",
-    //   img: "/bakso.png",
-    //   url: "https://bakso-pak-slamet.vercel.app",
-    //   desc: "Landing page sederhana untuk UMKM kuliner. Fokus pada kecepatan dan kemudahan kontak via WhatsApp.",
+    //   title: "Spark Property",
+    //   img: "/spark.png",
+    //   url: "https://spark-property.vercel.app",
+    //   desc: "Website properti dengan desain modern dan responsif. Dibuat menggunakan Next.js & Tailwind.",
     // },
+    {
+      title: "Warung Bakso Pak Slamet",
+      img: "/bakso.png",
+      url: "https://bakso-pak-slamet.vercel.app",
+      desc: "Landing page sederhana untuk UMKM kuliner. Fokus pada kecepatan dan kemudahan kontak via WhatsApp.",
+    },
     // {
     //   title: "CV Jaya Printing",
     //   img: "/printing.png",

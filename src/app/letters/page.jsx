@@ -42,7 +42,7 @@ export default function Letters() {
           </p>
 
           {/* Disclaimer */}
-          <div className="bg-red-500 border border-zinc-700 text-sm text-black rounded-md p-4">
+          <div className="bg-zinc-900 text-white border border-zinc-700 text-sm  rounded-md p-4">
             <p>
               <strong className="text-xl">Disclaimer:</strong> Artikel di blog
               ini adalah catatan pribadi untuk berbagi pengalaman dan insight

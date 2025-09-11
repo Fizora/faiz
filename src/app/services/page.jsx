@@ -51,6 +51,7 @@ export default function Service() {
       {/* Sidebar */}
       <Sidebar />
       {/*  create some banner to promotion  */}
+      <section className=""></section>
 
       {/* Konten utama */}
       <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400">

@@ -10,7 +10,6 @@ It showcases my projects, skills, and experiences as a **Web Developer**.
 ## ✨ Features
 - ⚡️ Built with Next.js 14 (App Router)
 - 🎨 Tailwind CSS for modern and responsive UI
-- 🌙 Dark & Light mode support
 - 📱 Fully responsive design
 - 📂 Project showcase with filter & categories
 - 📝 Blog section for sharing insights

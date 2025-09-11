@@ -34,10 +34,8 @@ export default function SocialMedia() {
       {/* Sidebar */}
       <Sidebar />
 
-{/*         add banner for making promotion */}
-      <section className="">
-          
-      </section>
+      {/* add banner for making promotion */}
+      <section className=""></section>
       {/* Konten utama */}
       <main className="flex-1 px-4 md:px-10 py-10 text-zinc-400 ">
         <section className="py-30 space-y-6">

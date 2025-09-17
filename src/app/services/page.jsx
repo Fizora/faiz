@@ -87,7 +87,7 @@ export default function Service() {
                 <a
                   href={plan.whatsapp}
                   target="_blank"
-                  className="mt-6 block text-center border border-zinc-700 bg-zinc-950 text-white  py-2 px-4 rounded-sm hover:bg-green-500 hover:text-black transition"
+                  className="mt-6 block text-center border border-zinc-700 hover:bg-zinc-950 hover:text-white  py-2 px-4 rounded-sm bg-green-500 text-black transition"
                 >
                   Hubungi via WhatsApp
                 </a>

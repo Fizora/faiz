@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const letters = [
-  {
-    title: "Gua membuat 4 website untuk bulan ini !!",
-    date: "August 8, 2025",
-    link: "/letters/letters2",
-  },
+  // {
+  //   title: "Gua membuat 4 website untuk bulan ini !!",
+  //   date: "August 8, 2025",
+  //   link: "/letters/letters2",
+  // },
   {
     title: "4 Kesalahan gua sebagai pemula",
     date: "September 2, 2025",

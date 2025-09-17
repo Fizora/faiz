@@ -76,10 +76,50 @@ export default function Home() {
   const framework = [
     { id: 1, name: "TailwindCSS", precentage: "86%" },
     { id: 2, name: "React", precentage: "95%" },
+    { id: 2, name: "Next Js", precentage: "80%" },
     { id: 3, name: "Laravel", precentage: "84%" },
     { id: 4, name: "Express JS", precentage: "54%" },
+    { id: 4, name: "Nest JS", precentage: "54%" },
     { id: 5, name: "Odoo 18", precentage: "68%" },
     { id: 6, name: "Hono JS", precentage: "5%" },
+  ];
+
+  // Experience Object
+  const experiences = [
+    {
+      id: 1,
+      date: "April - Present 2025",
+      urls: [
+        {
+          label: "aplikasi.dqi.ac.id",
+          href: "https://aplikasi.dqi.ac.id/beranda",
+        },
+        {
+          label: "odoo-pesantren.gitbook.io",
+          href: "https://odoo-pesantren.gitbook.io/odoo-pesantren/",
+        },
+        { label: "ubig.co.id", href: "https://ubig.co.id" },
+      ],
+      description:
+        "Mengembangkan dan memelihara sistem manajemen Sekolah Islam di UBIG, menjabat sebagai pemimpin teknis dalam tim manajemen, dan mengembangkan serta memimpin divisi teknis Odoo Pesantren.",
+      image: {
+        src: "/odoo-pesantren.png",
+        alt: "odoo pesantren",
+      },
+      badges: ["Python", "Odoo 18", "Internship"],
+    },
+    // {
+    //   id: 2,
+    //   date: "2024 - 2025",
+    //   urls: [{ label: "myproject.com", href: "https://myproject.com" }],
+    //   description:
+    //     "Membangun aplikasi internal untuk manajemen inventaris di sebuah perusahaan ritel.",
+    //   image: {
+    //     src: "/inventory-app.png",
+    //     alt: "Inventory App",
+    //   },
+    //   badges: ["React", "Laravel", "Fullstack"],
+    // },
   ];
 
   return (
@@ -92,7 +132,7 @@ export default function Home() {
         <section className="py-30 space-y-6">
           <div className="h-30">
             <TextType
-              text={["Welcome Everyone 👋", "I'm Faiz", "Software Engineer⚙️"]}
+              text={["Selamat Datang 👋", "Saya Faiz", "Software Engineer⚙️"]}
               typingSpeed={75}
               pauseDuration={1500}
               className="text-5xl"
@@ -102,14 +142,12 @@ export default function Home() {
           </div>
           <span className="flex items-center gap-2 px-3 py-1  rounded-full border border-zinc-700 w-max">
             <IoLocationSharp size={15} />
-            <p>East Java, Indonesia</p>
+            <p>Jawa Timur, Indonesia</p>
           </span>
           <p className="leading-relaxed" data-aos="zoom-in-up">
-            Nama saya Faiz, saya seorang pengembang, saya sangat tertarik dengan
-            JavaScript dan TypeScript. Saya akan membangun perangkat lunak yang
-            bermanfaat untuk membantu banyak usaha kecil dan mikro yang
-            membutuhkan situs web cepat dan berusaha menarik lebih banyak
-            pelanggan.
+            Nama saya Faiz, saya seorang software engineer, saya tertarik dengan
+            JavaScript dan TypeScript. Saya menciptakan solusi efisien untuk
+            website skala kecil hingga menengah.
           </p>
           {/* button and time  */}
           <div className="flex items-center gap-2">
@@ -139,12 +177,13 @@ export default function Home() {
           </Title>
           <p>
             Saya seorang pengembang aplikasi full-stack yang berspesialisasi
-            dalam JavaScript dan TypeScript, dan saya juga berpengalaman
+            dalam JavaScript dan TypeScript, dan serta memiliki pengalaman
             menggunakan Laravel 12.
           </p>
           <p>
-            Saat ini saya siswa kelas 12 di sebuah sekolah menengah kejuruan dan
-            akan lulus pada tahun 2026.
+            Saat ini saya fokus mengembangkan suatu sistem Informasi dengan
+            menggunakan teknologi odoo untuk lembaga pendidikan islam di
+            Provinsi Kalimantan.
           </p>
           <Image
             alt="hiking in Panderman Mount"
@@ -154,9 +193,10 @@ export default function Home() {
             width={600}
           />
           <p>
-            Di waktu luang, saya senang membaca buku, pergi ke gym, coding,
-            mengerjakan proyek website, dan di weekend saya olahraga lari 6-10
-            km sambil menikmati lingkungan.
+            Di waktu luang, saya sendiri menghabiskan waktu untuk beraktifitas
+            di luar ruangan seperti lari atau berenang, namun lebih banyak
+            menghabiskan waktu untuk coding dan menambah proyek untuk daftar
+            showcase saya.
           </p>
           <p>
             Terkadang, pada hari-hari tertentu, saya pergi ke tempat wisata,
@@ -276,57 +316,50 @@ export default function Home() {
             </table>
           </div>
         </section>
+
         {/* Experience */}
         <section className="py-30 space-y-6">
           <div className="space-y-4" data-aos="zoom-in-up" data-aos-delay="100">
             <Title>Experience.</Title>
             <p>Jelajahi jejak pengalaman saya</p>
 
-            {/* experience #1 */}
-            <div className="space-y-6 py-3">
-              <Subtitle>April - Present 2025</Subtitle>
-              {/* Url */}
-              <div className="flex items-center flex-wrap gap-4 ">
-                <Url>
-                  <a href="https://aplikasi.dqi.ac.id" target="_blank">
-                    aplikasi.dqi.ac.id
-                  </a>
-                </Url>
-                <Url>
-                  <a
-                    href="https://odoo-pesantren.gitbook.io/odoo-pesantren/"
-                    target="_blank"
-                  >
-                    odoo-pesantren.gitbok.io
-                  </a>
-                </Url>
-                <Url>
-                  <a href="https://ubig.co.id" target="_blank">
-                    ubig.co.id
-                  </a>
-                </Url>
+            {experiences.map((exp) => (
+              <div key={exp.id} className="space-y-6 py-3">
+                <Subtitle>{exp.date}</Subtitle>
+
+                {/* Urls */}
+                <div className="flex items-center flex-wrap gap-4">
+                  {exp.urls.map((url, i) => (
+                    <Url key={i}>
+                      <a href={url.href} target="_blank">
+                        {url.label}
+                      </a>
+                    </Url>
+                  ))}
+                </div>
+
+                {/* Description */}
+                <p>{exp.description}</p>
+
+                {/* Image */}
+                <Image
+                  alt={exp.image.alt}
+                  src={exp.image.src}
+                  height={100}
+                  width={600}
+                />
+
+                {/* Badges */}
+                <div className="flex items-center gap-2">
+                  {exp.badges.map((badge, i) => (
+                    <Badge key={i}>{badge}</Badge>
+                  ))}
+                </div>
               </div>
-              {/* explain */}
-              <p>
-                Mengembangkan dan memelihara sistem manajemen Sekolah Islami di
-                UBIG, menjabat sebagai pemimpin teknis dalam tim manajemen, dan
-                mengembangkan serta memimpin divisi teknis Odoo Pesantren.
-              </p>
-              <Image
-                alt="odoo pesantren"
-                src="/odoo-pesantren.png"
-                height={100}
-                width={600}
-              ></Image>
-              {/* category badge stack and company */}
-              <div className="flex items-center gap-2">
-                <Badge>Python</Badge>
-                <Badge>Odoo 18</Badge>
-                <Badge>Internship</Badge>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
+
         <Footer />
       </main>
     </div>

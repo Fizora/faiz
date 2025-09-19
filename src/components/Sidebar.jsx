@@ -26,7 +26,7 @@ export default function Sidebar() {
   return (
     <>
       {/* mobile navbar */}
-      <div className="fixed top-0 left-0 w-full md:hidden flex items-center justify-between px-4 py-4 border-b bg-zinc-950 z-10 border-zinc-800">
+      <div className="fixed top-0 left-0 w-full md:hidden flex items-center justify-between px-4 py-4 border-b bg-zinc-950 backdrop-blur-sm z-10 border-zinc-800">
         <div className="flex items-center gap-2">
           <Image
             src="/profile.jpg"
@@ -87,7 +87,7 @@ export default function Sidebar() {
       {/* Menu mobile */}
       {open && (
         <div className="fixed top-0 left-0 w-full z-50">
-          <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50 p-4">
+          <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-zinc-900/70 backdrop-blur-sm z-50 p-4">
             <div className="flex items-center justify-between w-full">
               <div className=""></div>
               <button

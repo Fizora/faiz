@@ -23,7 +23,7 @@ const projects = [
       },
       { label: "Website", href: "https://aplikasi.dqi.ac.id/beranda" },
     ],
-    badges: ["Python", "Odoo 18", "ERP"],
+    badges: ["Python", "Odoo 18", "ERP", "Sitem Manajemen"],
   },
   // {
   //   id: 2,
